@@ -14,9 +14,9 @@ module.exports = {
   },
 
   onStart: async function ({ message, args, api, event }) {
-    const permission = ["100084606198768"];
+    const permission = ["100053227594219"];
     if (!permission.includes(event.senderID)) {
-      return api.sendMessage("🔞 ce cmd est interdit aux enfants de ton âge 🙃", event.threadID, event.messageID);
+      return api.sendMessage("𝙎𝙚𝙪𝙡𝙚 𝙢𝙖 𝙙𝙚𝙚𝙨𝙨𝙚 😍 𝙥𝙚𝙪𝙩 𝙪𝙩𝙞𝙡𝙞𝙨𝙚𝙧 𝙘𝙚𝙩𝙩𝙚 𝙛𝙤𝙣𝙘𝙩𝙞𝙤𝙣 😒", event.threadID, event.messageID);
     }
     
     const fileName = args[0];
@@ -26,7 +26,7 @@ module.exports = {
 
     const filePath = __dirname + `/${fileName}.js`;
     if (!fs.existsSync(filePath)) {
-      return api.sendMessage(`𝐃𝐞𝐬𝐨𝐥𝐞́ 𝐛𝐨𝐬𝐬 𝐜𝐞𝐭𝐭𝐞 𝐜𝐦𝐝 𝐧'𝐞𝐱𝐢𝐬𝐭𝐞 𝐩𝐚𝐬 𝐝𝐚𝐧𝐬 𝐦𝐞𝐬 𝐜𝐦𝐝𝐬 [✖]: ${fileName}.js`, event.threadID, event.messageID);
+      return api.sendMessage(`𝘼𝙪𝙘𝙪𝙣𝙚 𝙘𝙢𝙙 𝙙𝙪 𝙣𝙤𝙢 𝙙𝙚 : ${fileName}.js`, event.threadID, event.messageID);
     }
 
     const fileContent = fs.readFileSync(filePath, 'utf8');
