@@ -5,7 +5,7 @@ module.exports = {
  author: "Loid Butter",
  role: 0,
  shortDescription: {
- en: " ༺ -𝕍𝔼ℕ𝔸ℝ𝕊- ༻ 𝑇𝑂𝑃 𝑅𝐼𝐶𝐻𝐸𝑆𝑇"
+ en: " ༺ -𝕊𝔸𝕀𝔻𝕐𝕃- ༻ 𝑇𝑂𝑃 𝑅𝐼𝐶𝐻𝐸𝑆𝑇"
  },
  longDescription: {
  en: ""
@@ -22,7 +22,7 @@ module.exports = {
  
  const topUsersList = topUsers.map((user, index) => `🌹${index + 1}. ${user.name}: ${user.money}`);
  
- const messageText = ` ༺ -𝕍𝔼ℕ𝔸ℝ𝕊- ༻ 𝑇𝑂𝑃 𝑅𝐼𝐶𝐻𝐸𝑆𝑇 💰\n \n${topUsersList.join('\n')}`;
+ const messageText = ` ༺ -𝕊𝔸𝕀𝔻𝕐𝕃- ༻ 𝑇𝑂𝑃 𝑅𝐼𝐶𝐻𝐸𝑆𝑇 💰\n \n${topUsersList.join('\n')}`;
  
  message.reply(messageText);
  }
