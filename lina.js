@@ -14,14 +14,14 @@ module.exports = {
 		category: 'Ai chat',
 		guide: {
 			en: '   {pn} <word>: chat with lina'
-				+ '\Example:{pn} hi'
+				+ '\nExample:{pn} hi'
 		}
 	},
 
 	langs: {
 		en: {
-			turnedOn: 'Il est temps de vous clasher à la maniere HAITANI😈!',
-			turnedOff: 'Tu as tellement peur de moi que tu me met off fils de pute🖕!',
+			turnedOn: "𝒋'𝒗𝒂𝒊𝒔 𝒎𝒆 𝒕𝒂𝒑𝒆𝒓 𝒖𝒏𝒆 𝒅𝒆 𝒄𝒆𝒔 𝒑𝒕𝒊𝒕𝒆𝒔 𝒄𝒂𝒖𝒔𝒆𝒕𝒕𝒆𝒔 𝒃𝒊𝒆𝒏 𝒔𝒆𝒓𝒓𝒆𝒆𝒔 𝒂𝒗𝒆𝒄 𝒆𝒖𝒙.. 😈",
+			turnedOff: "𝒂𝒂𝒉.. 𝒅𝒆𝒋𝒂.. 𝑻'𝒆𝒔 𝒑𝒂𝒔 𝒄𝒐𝒐𝒍,𝒕𝒐𝒊",
 			chatting: 'Already Chatting with 𝗟𝗢𝗙𝗧...',
 			error: 'Tu ne sais pas écrire?🙂'
 		}
