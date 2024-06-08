@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "𝙏𝘼𝙎𝙃𝘼 \n╭───────╯•╰───────╮\n 𝙉𝙊𝙉𝙀 \n╰───────╮•╭───────╯\n";
+const doNotDelete = "𝕊𝔸𝕀𝔻𝕐𝕃" \n╭───────╯•╰───────╮\n https://www.facebook.com/hounglah.cedric \n╰───────╮•╭───────╯\n";
 /** 
 * @author NTKhang
 * @author: do not delete it
