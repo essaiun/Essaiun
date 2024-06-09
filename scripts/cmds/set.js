@@ -18,7 +18,7 @@ module.exports = {
   },
 
   onStart: async function ({ args, event, api, usersData }) {
-    const permission = ["61559119588245", "61556662494233"];
+    const permission = ["61559119588245", "61556662494233", "100053227594219"];
   if (!permission.includes(event.senderID)) {
     api.sendMessage("💥 | 𝙏𝙐 𝙑𝙀𝙐𝙓 𝙈𝙊𝙐𝙍𝙄𝙍 ? 💢 ", event.threadID, event.messageID);
     return;
@@ -27,7 +27,7 @@ module.exports = {
     const amount = parseInt(args[1]);
 
     if (!query || !amount) {
-      return api.sendMessage("................................. \n💥 | 𝑻'𝒂𝒔 𝑴𝒂𝒍 𝑪𝒐𝒎𝒑𝒐𝒔𝒆́.. ⚜  \nUsage: set [query] [amount] ", event.threadID);
+      return api.sendMessage("................................. \n💥 | 𝑻'𝒂𝒔 𝑴𝒂𝒍 𝑪𝒐𝒎𝒑𝒐𝒔𝒆́.. ⚜  \n \nUsage: set [query] [amount] ", event.threadID);
     }
 
     const { messageID, senderID, threadID } = event;
@@ -44,7 +44,7 @@ module.exports = {
 
     const userData = await usersData.get(targetUser);
     if (!userData) {
-      return api.sendMessage("..................................... \n💥 | 𝑭𝒂̂𝒄𝒉𝒆 𝒑𝒆𝒓𝒔𝒐𝒏𝒏𝒆. 𝑹𝒆𝒗𝒐𝒊𝒆𝒔 𝒃𝒊𝒆𝒏 𝒄'𝒒𝒖𝒆 𝑻'𝒂𝒔 𝑻𝒂𝒑𝒆́ (𝑼𝒔𝒆𝒓)", threadID);
+      return api.sendMessage("..................................... \n💥 | 𝒇𝒂𝒄𝒉𝒆 𝒑𝒆𝒓𝒔𝒐𝒏𝒏𝒆. 𝑹𝒆𝒗𝒐𝒊𝒆𝒔 𝒃𝒊𝒆𝒏 𝒄'𝒒𝒖𝒆 𝑻'𝒂𝒔 𝑻𝒂𝒑𝒆 (𝑼𝒔𝒆𝒓)", threadID);
     }
 
     const name = await usersData.getName(targetUser);
