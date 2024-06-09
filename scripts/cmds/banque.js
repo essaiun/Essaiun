@@ -1,4 +1,4 @@
-const fs = require("fs");
+#cmd install banque.js const fs = require("fs");
 const path = require("path");
 
 module.exports = {
@@ -114,7 +114,7 @@ case "interet":
   const timeDiffInSeconds = (currentTime - lastInterestClaimed) / 1000;
 
   if (timeDiffInSeconds < 300) {
-    // If it's been less than 30 minutes since the last interest claim
+    // If it's been less than 5 minutes since the last interest claim
     const remainingTime = Math.ceil(300 - timeDiffInSeconds);
     const remainingHours = Math.floor(remainingTime / 37500);
     const remainingMinutes = Math.floor((remainingTime % 60) / 12);
@@ -254,7 +254,7 @@ fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
 break;
 
 default:
-  return message.reply("°•✮•°____________________\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n🕊𝚅𝙴𝚄𝙸𝙻𝙻𝙴𝚉 𝙸𝙽𝚂𝙴𝚁𝙴𝚁 𝙻'𝚄𝙽𝙴 𝙳𝙴𝚂 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝙴𝚂 𝚂𝚄𝙸𝚅𝙰𝙽𝚃𝙴𝚂 :\n____________________\n ༐⸙𝐑𝐞𝐭𝐫𝐚𝐢𝐭༐⸙\n_______________________\n ༐⸙𝐒𝐨𝐥𝐝𝐞༐⸙ \n______________________\n༐⸙ 𝐈𝐧𝐭𝐞𝐫𝐞𝐭༐⸙ \n______________________\n ༐⸙𝐓𝐫𝐚𝐧𝐬𝐟𝐞𝐫𝐭 ༐⸙\n_____________________ \n ༐⸙𝐃𝐞𝐩𝐨𝐭༐⸙ \n________________________\n༐⸙ 𝐏𝐫𝐞𝐭 ༐⸙\n______________________\n༐⸙𝐏𝐚𝐢𝐞𝐦𝐞𝐧𝐭༐⸙___________________\n °•✮•°");
+  return message.reply("°•✮•° \n____________________\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n🕊𝚅𝙴𝚄𝙸𝙻𝙻𝙴𝚉 𝙸𝙽𝚂𝙴𝚁𝙴𝚁 𝙻'𝚄𝙽𝙴 𝙳𝙴𝚂 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝙴𝚂 𝚂𝚄𝙸𝚅𝙰𝙽𝚃𝙴𝚂 :\n____________________\n ༐⸙𝐑𝐞𝐭𝐫𝐚𝐢𝐭༐⸙\n_______________________\n ༐⸙𝐒𝐨𝐥𝐝𝐞༐⸙ \n______________________\n༐⸙ 𝐈𝐧𝐭𝐞𝐫𝐞𝐭༐⸙ \n______________________\n ༐⸙𝐓𝐫𝐚𝐧𝐬𝐟𝐞𝐫𝐭 ༐⸙\n_____________________ \n ༐⸙𝐃𝐞𝐩𝐨𝐭༐⸙ \n________________________\n༐⸙ 𝐏𝐫𝐞𝐭 ༐⸙\n______________________\n༐⸙𝐏𝐚𝐢𝐞𝐦𝐞𝐧𝐭༐⸙\n___________________\n °•✮•°");
 }
   }
 };
@@ -311,4 +311,4 @@ function formatNumberWithFullForm(number) {
 
   // Add the full form to the formatted number
   return `${formattedNumber} ${fullForms[fullFormIndex]}`;
-}
+    }
