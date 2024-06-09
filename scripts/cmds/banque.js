@@ -113,11 +113,11 @@ case "interet":
   const currentTime = Date.now();
   const timeDiffInSeconds = (currentTime - lastInterestClaimed) / 1000;
 
-  if (timeDiffInSeconds < 86400) {
-    // If it's been less than 24 hours since the last interest claim
-    const remainingTime = Math.ceil(86400 - timeDiffInSeconds);
-    const remainingHours = Math.floor(remainingTime / 3600);
-    const remainingMinutes = Math.floor((remainingTime % 3600) / 60);
+  if (timeDiffInSeconds < 1800) {
+    // If it's been less than 30 minutes since the last interest claim
+    const remainingTime = Math.ceil(1800 - timeDiffInSeconds);
+    const remainingHours = Math.floor(remainingTime / 60);
+    const remainingMinutes = Math.floor((remainingTime % 60) / 2);
 
     return message.reply(`╔-------------------------------╗\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n✨💜𝚃𝚄 𝙿𝙴𝚄𝚇 𝙴𝙽𝙲𝙾𝚁𝙴 𝚁𝙴𝙲𝙻𝙰𝙼𝙴𝚁 𝚃𝙴𝚂 𝙸𝙽𝚃𝙴𝚁𝙴𝚃𝚂 𝙳𝙰𝙽𝚂 ${remainingHours} 𝙷𝙴𝚄𝚁𝙴𝚂 𝙴𝚃 ${remainingMinutes} 𝙼𝙸𝙽𝚄𝚃𝙴𝚂 ☪•\n\n╚-----------------------------╝`);
   }
