@@ -8,7 +8,7 @@ module.exports = {
     description: "Deposit or withdraw money from the bank and earn interest",
     guide: {
       vi: "",
-      en: "{pn}Bank:\nInteret - Balance\n - Retrait \n- Depot \n- Transfert \n- Richest"
+      en: "{pn}Bank:\n-Interet \n- Balance \n- Retrait \n- Depot \n- Transfert \n- Richest"
     },
     category: "💰 Economy",
     countDown: 15,
@@ -176,7 +176,7 @@ case "richesse":
 
   const topUsers = Object.entries(bankDataCp)
     .sort(([, a], [, b]) => b.bank - a.bank)
-    .slice(0, 10);
+    .slice(0, 50);
 
   const output = (await Promise.all(topUsers.map(async ([userID, userData], index) => {
     const userName = await usersData.getName(userID);
@@ -184,7 +184,7 @@ case "richesse":
     return `[${index + 1}. ${userName} - $${formattedBalance}]`;
   }))).join('\n');
 
-  return message.reply("╔---------------------------------╗\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n🙂𝗍𝗈𝗉 10 𝖽𝖾𝗌 𝗆𝖾𝖼𝗌 𝖾𝗍 𝗆𝖾𝗎𝖿𝗌 𝗊𝗎𝗂 𝗈𝗇𝗍 𝗅𝖾 𝗉𝗅𝗎𝗌 𝖽𝖾 𝖿𝗋𝗂𝖼𝗌 𝖽𝖺𝗇𝗌 𝗅𝖾𝗎𝗋𝗌 𝖼𝗈𝗆𝗉𝗍𝖾𝗌 𝖻𝖺𝗇𝖼𝖺𝗂𝗋𝖾 👑🤴:\n" + output + "\n\n╚------------------------------------╝");
+  return message.reply("╔---------------------------------╗\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n🙂𝗍𝗈𝗉 50 𝖽𝖾𝗌 𝗆𝖾𝖼𝗌 𝖾𝗍 𝗆𝖾𝗎𝖿𝗌 𝗊𝗎𝗂 𝗈𝗇𝗍 𝗅𝖾 𝗉𝗅𝗎𝗌 𝖽𝖾 𝖿𝗋𝗂𝖼𝗌 𝖽𝖺𝗇𝗌 𝗅𝖾𝗎𝗋 𝖼𝗈𝗆𝗉𝗍𝖾 𝖻𝖺𝗇𝖼𝖺𝗂𝗋𝖾 👑🤴:\n" + output + "\n\n╚------------------------------------╝");
 
 break;
 
