@@ -20,8 +20,8 @@ module.exports = {
 		},
 		envConfig: {
 			rewardFirstDay: {
-				coin: 100,
-				exp: 10
+				coin: 90000,
+				exp: 50
 			}
 		}
 	},
@@ -56,7 +56,7 @@ module.exports = {
 		if (args[0] == "info") {
 			let msg = "";
 			for (let i = 1; i < 8; i++) {
-				const getCoin = Math.floor(reward.coin * (1 + 20 / 100) ** ((i == 0 ? 7 : i) - 1));
+				const getCoin = Math.floor(reward.coin * (5 + 20 / 100) ** ((i == 0 ? 7 : i) - 1));
 				const getExp = Math.floor(reward.exp * (1 + 20 / 100) ** ((i == 0 ? 7 : i) - 1));
 				const day = i == 7 ? getLang("sunday") :
 					i == 6 ? getLang("saturday") :
