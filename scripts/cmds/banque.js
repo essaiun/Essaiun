@@ -107,7 +107,7 @@ case "solde":
 
 
 case "interet":
-  const interestRate = 0.1; // 0.1% daily interest rate
+  const interestRate = 0.1; // 30% daily interest rate
   const lastInterestClaimed = bankData[user].lastInterestClaimed || 0;
 
   const currentTime = Date.now();
