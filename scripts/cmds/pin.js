@@ -1,64 +1,74 @@
-const fs = require("fs-extra")
-const axios = require("axios")
+const axios = require("axios");
+const fs = require("fs-extra");
+const path = require("path");
+
 module.exports = {
-	config: {
-		name: "pinterest",
-    aliases: ["pin"],
-		version: "1",
-		author: "Aesther",
-		countDown: 5,
-		role: 0,
-		shortDescription: {
-			vi: "Image Pinterest Search 📷",
-			en: "Image pinterest Search 📸"
-		},
-		longDescription: {
-			uid: "Pinterest Search",
-			en: "Pinterest 🔎 image 😼"
-		},
-		category: "images search",
-		guide: {
-			vi: "   {pn}: enter in the format, example: Pinterest JUJUK-AISEN - 10 (it depends on you how many images you want to appear in the result)",
-			en: "   {pn}: enter in the format, example: Pinterest SASUKE KUN - 10 (it depends on you how many images you want to appear in the result)"
-		}
-	},
- 
-	langs: {
-		vi: {
-			syntaxError: "Server Busy"
-		},
-		en: {
-			syntaxError: "Server Busy"
-		}
-	},
- 
-	onStart: async function ({ api, message, event, args, getLang }) 
-  {
- 
-    const keySearch = args.join(" ");
-    if(keySearch.includes("-") == false) return api.sendMessage(' 𝗘𝘅𝗲𝗺𝗽𝗹𝗲 : •𝗽𝗶𝗻 𝗜𝘁𝗮𝗰𝗵𝗶 - 10\n (Ç𝐀 𝐃𝐄𝐏𝐀𝐍𝐃 𝐃𝐔 𝐍𝐎𝐌𝐁𝐑𝐄 𝐃.𝐈𝐌𝐀𝐆𝐄 𝐐𝐔𝐄 𝐕𝐎𝐔𝐒 𝐕𝐎𝐔𝐋𝐄𝐙 )', event.threadID, event.messageID)
-    const keySearchs = keySearch.substr(0, keySearch.indexOf('-'))
-    let numberSearch = keySearch.split("-").pop() || 6
-    if(numberSearch>20){
-      numberSearch = 20
+  config: {
+    name: "pin",
+    aliases: ["pinterest"],
+    version: "1.0.0",
+    author: "kshitiz",
+    role: 0,
+    countDown: 10,
+    shortDescription: {
+      en: "Search images on Pinterest"
+    },
+    category: "image",
+    guide: {
+      en: "{prefix}pin <search query> -<number of images>"
     }
-    const res = await axios.get(`https://hazee-social-downloader-9080f854bdab.herokuapp.com/pinterest?search=${encodeURIComponent(keySearchs)}`);
-    const data = res.data.data;
-    var num = 0;
-    var imgData = [];
-    for (var i = 0; i < parseInt(numberSearch); i++) {
-      let path = __dirname + `/tmp/${num+=1}.jpg`;
-      let getDown = (await axios.get(`${data[i]}`, { responseType: 'arraybuffer' })).data;
-      fs.writeFileSync(path, Buffer.from(getDown, 'utf-8'));
-      imgData.push(fs.createReadStream(__dirname + `/tmp/${num}.jpg`));
-    }
-    api.sendMessage({
+  },
+
+  onStart: async function ({ api, event, args, usersData }) {
+    try {
+      const searchQuery = args.join(" ");
+
+   
+      if (!searchQuery.includes("-")) {
+        return api.sendMessage(`Invalid format. Example: {prefix}pin cats -5`, event.threadID, event.messageID);
+      }
+
+     
+      const [query, numImages] = searchQuery.split("-").map(str => str.trim());
+      const numberOfImages = parseInt(numImages);
+
+     
+      if (isNaN(numberOfImages) || numberOfImages <= 0 || numberOfImages > 25) {
+        return api.sendMessage("Please specify a number between 1 and 25.", event.threadID, event.messageID);
+      }
+
+   
+      const apiUrl = `https://pin-kshitiz.vercel.app/pin?search=${encodeURIComponent(query)}`;
+      const response = await axios.get(apiUrl);
+      const imageData = response.data.result;
+
+     
+      if (!imageData || !Array.isArray(imageData) || imageData.length === 0) {
+        return api.sendMessage(`No images found for "${query}".`, event.threadID, event.messageID);
+      }
+
+    
+      const imgData = [];
+      for (let i = 0; i < Math.min(numberOfImages, imageData.length); i++) {
+        const imageUrl = imageData[i];
+        try {
+          const imgResponse = await axios.get(imageUrl, { responseType: 'arraybuffer' });
+          const imgPath = path.join(__dirname, 'cache', `${i + 1}.jpg`);
+          await fs.outputFile(imgPath, imgResponse.data);
+          imgData.push(fs.createReadStream(imgPath));
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+     
+      await api.sendMessage({
         attachment: imgData,
-        body: numberSearch + '-- 𝗥𝗘́𝗦𝗨𝗟𝗧𝗔𝗧--:\n '+ keySearchs
-    }, event.threadID, event.messageID)
-    for (let ii = 1; ii < parseInt(numberSearch); ii++) {
-        fs.unlinkSync(__dirname + `/tmp/${ii}.jpg`)
+        body: ``
+      }, event.threadID, event.messageID);
+    } catch (error) {
+      console.error(error);
+      return api.sendMessage(`An error occurred.`, event.threadID, event.messageID);
     }
-}
- 
+  }
 };
