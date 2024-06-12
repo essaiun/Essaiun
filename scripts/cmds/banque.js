@@ -1,4 +1,4 @@
-const fs = require("fs");
+#cmd install banque.js  const fs = require("fs");
 const path = require("path");
 
 module.exports = {
@@ -8,7 +8,7 @@ module.exports = {
     description: "Deposit or withdraw money from the bank and earn interest",
     guide: {
       vi: "",
-      en: "{pn}Bank:\n-Interet \n- Balance \n- Retrait \n- Depot \n- Transfert \n- paiement \n- Richest"
+      en: "{pn}Bank:\n-interet \n- balance \n- retrait \n- depot \n- transfert \n- paiement \n- riches"
     },
     category: "💰 Economy",
     countDown: 15,
@@ -107,7 +107,7 @@ case "solde":
 
 
 case "interet":
-  const interestRate = 0.1; // 30% daily interest rate
+  const interestRate = 20; // 12% daily interest rate
   const lastInterestClaimed = bankData[user].lastInterestClaimed || 0;
 
   const currentTime = Date.now();
@@ -171,7 +171,7 @@ fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
 break;
 
 
-case "richesse":
+case "riches":
   const bankDataCp = JSON.parse(fs.readFileSync('scripts/cmds/bankData.json', 'utf8'));
 
   const topUsers = Object.entries(bankDataCp)
@@ -217,7 +217,7 @@ fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
 
 break;
 
-case "Paiement":
+case "paiement":
   const loanBalance = bankData[user].loan || 0;
 
   if (isNaN(amount) || amount <= 0) {
@@ -254,7 +254,7 @@ fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
 break;
 
 default:
-  return message.reply("°•✮•° \n____________________\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n🕊𝚅𝙴𝚄𝙸𝙻𝙻𝙴𝚉 𝙸𝙽𝚂𝙴𝚁𝙴𝚁 𝙻'𝚄𝙽𝙴 𝙳𝙴𝚂 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝙴𝚂 𝚂𝚄𝙸𝚅𝙰𝙽𝚃𝙴𝚂 :\n____________________\n ༐⸙𝐑𝐞𝐭𝐫𝐚𝐢𝐭༐⸙\n_______________________\n ༐⸙𝐒𝐨𝐥𝐝𝐞༐⸙ \n______________________\n༐⸙ 𝐈𝐧𝐭𝐞𝐫𝐞𝐭༐⸙ \n______________________\n ༐⸙𝐓𝐫𝐚𝐧𝐬𝐟𝐞𝐫𝐭 ༐⸙\n_____________________ \n ༐⸙𝐃𝐞𝐩𝐨𝐭༐⸙ \n________________________\n༐⸙ 𝐏𝐫𝐞𝐭 ༐⸙\n______________________\n༐⸙𝐏𝐚𝐢𝐞𝐦𝐞𝐧𝐭༐⸙\n___________________\n °•✮•°");
+  return message.reply("°•✮•° \n____________________\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n🕊𝚅𝙴𝚄𝙸𝙻𝙻𝙴𝚉 𝙸𝙽𝚂𝙴𝚁𝙴𝚁 𝙻'𝚄𝙽𝙴 𝙳𝙴𝚂 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝙴𝚂 𝚂𝚄𝙸𝚅𝙰𝙽𝚃𝙴𝚂 :\n____________________\n ༐⸙ 𝐑𝐞𝐭𝐫𝐚𝐢𝐭 ༐⸙\n_______________________\n ༐⸙ 𝐒𝐨𝐥𝐝𝐞 ༐⸙ \n______________________\n༐⸙ 𝐈𝐧𝐭𝐞𝐫𝐞𝐭 ༐⸙ \n______________________\n ༐⸙ 𝐓𝐫𝐚𝐧𝐬𝐟𝐞𝐫𝐭 ༐⸙\n_____________________ \n ༐⸙ 𝐃𝐞𝐩𝐨𝐭 ༐⸙ \n________________________\n༐⸙ 𝐏𝐫𝐞𝐭 ༐⸙\n______________________\n༐⸙ 𝐏𝐚𝐢𝐞𝐦𝐞𝐧𝐭 ༐⸙\n___________________\n༐⸙ 𝐑𝐢𝐜𝐡𝐞𝐬 ༐⸙ \n___________________\n °•✮•°");
 }
   }
 };
@@ -311,4 +311,4 @@ function formatNumberWithFullForm(number) {
 
   // Add the full form to the formatted number
   return `${formattedNumber} ${fullForms[fullFormIndex]}`;
-    }
+  }
