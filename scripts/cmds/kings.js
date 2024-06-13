@@ -1,4 +1,4 @@
-#cmd install kings.js module.exports = {
+ module.exports = {
   config: {
     name: "kings",
     aliases: ["kng"],
