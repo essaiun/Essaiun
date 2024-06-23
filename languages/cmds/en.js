@@ -37,17 +37,17 @@ module.exports = {
 		}
 	},
 	adminonly: {
-		description: "turn on/off only admin can use bot",
-		guide: "{pn} [on | off]",
+		description: "l'utilisation du bot par seuls les admins du bot.",
+		guide: "{pn} [on | off] \n {pn} adminonly on: pour activer l'utilisation du bot par seulement les admins du bot. \n {pn} adminonly off: pour désactiver l'utilisation du bot par les admins du bot seulement. ",
 		text: {
-			turnedOn: "Turned on the mode only admin can use bot",
-			turnedOff: "Turned off the mode only admin can use bot",
-			syntaxError: "Syntax error, only use {pn} on or {pn} off"
+			turnedOn: "⚜️🌹.................................. \n \nl'utilisation du bot par seuls les admins du bot activée",
+			turnedOff: "⚜️🌹.................................. \n \nl'utilisation du bot par seuls les admins du bot désactivée. Tous peuvent maintenant utiliser les cmds",
+			syntaxError: "⚜️🌹.................................. \n \nErreur dans la composition. tape help adminonly pour voir comment t'y prendre."
 		}
 	},
 	all: {
-		description: "Tag all members in your group chat",
-		guide: "{pn} [content | empty]"
+		description: "mentionner tous les membres du groupe. écrire à tous.",
+		guide: "{pn} [content | empty] \n {pn} all message"
 	},
 	anime: {
 		description: "random anime image",
@@ -58,22 +58,22 @@ module.exports = {
 		}
 	},
 	antichangeinfobox: {
-		description: "Turn on/off anti change info box",
-		guide: "   {pn} avt [on | off]: anti change avatar box chat\n   {pn} name [on | off]: anti change name box chat\n   {pn} theme [on | off]: anti change theme (chủ đề) box chat\n   {pn} emoji [on | off]: anti change emoji box chat",
+		description: "empêcher le changement des caractéristiques du groupe: nom, photo de profil, thème, réaction rapide.",
+		guide: "   {pn} avt on  ou  {pn} avt off: empêcher ou permettre de changer la photo de profil du groupe.\n   {pn} name on  ou  {pn} name off: empêcher ou permettre de changer le nom du groupe.\n   {pn} theme on  ou  {pn} theme off: empêcher ou permettre de changer le thème du groupe.\n   {pn} emoji on  ou  {pn} off: empêcher ou permettre de changer la réaction rapide du groupe.",
 		text: {
-			antiChangeAvatarOn: "Turn on anti change avatar box chat",
-			antiChangeAvatarOff: "Turn off anti change avatar box chat",
-			missingAvt: "You have not set avatar for box chat",
-			antiChangeNameOn: "Turn on anti change name box chat",
-			antiChangeNameOff: "Turn off anti change name box chat",
-			antiChangeThemeOn: "Turn on anti change theme box chat",
-			antiChangeThemeOff: "Turn off anti change theme box chat",
-			antiChangeEmojiOn: "Turn on anti change emoji box chat",
-			antiChangeEmojiOff: "Turn off anti change emoji box chat",
-			antiChangeAvatarAlreadyOn: "Your box chat is currently on anti change avatar",
-			antiChangeNameAlreadyOn: "Your box chat is currently on anti change name",
-			antiChangeThemeAlreadyOn: "Your box chat is currently on anti change theme",
-			antiChangeEmojiAlreadyOn: "Your box chat is currently on anti change emoji"
+			antiChangeAvatarOn: "⚜️🌹.................................. \n \n✔️| seuls les admins du groupe peuvent désormais changer la photo du groupe.",
+			antiChangeAvatarOff: "⚜️🌹.................................. \n \nle changement de photo de profil du groupe par seuls les admins du groupe désactivé.",
+			missingAvt: "⚜️🌹.................................. \n \n❌| tu n'as pas indiqué ce qu'il faut bloquer ou autoriser. avt , name , theme ou emoji ?",
+			antiChangeNameOn: "⚜️🌹.................................. \n \n✔️| seuls les admins du groupe peuvent changer le nom du groupe désormais.",
+			antiChangeNameOff: "⚜️🌹.................................. \n \nle changement du nom du groupe par seuls les admins du groupe désactivé. ",
+			antiChangeThemeOn: "⚜️🌹.................................. \n \n ✔️| seuls les admins du groupe peuvent changer le thème du groupe désormais.",
+			antiChangeThemeOff: "⚜️🌹.................................. \n \nle changement du thème du groupe par seuls les admins du groupe désactivé.",
+			antiChangeEmojiOn: "⚜️🌹.................................. \n \n✔️| seuls les admins du groupe peuvent changer la réaction rapide dorénavant.",
+			antiChangeEmojiOff: "le changement de la réaction rapide par seuls les admins du groupe désactivé.",
+			antiChangeAvatarAlreadyOn: "ce mode est déjà activé.",
+			antiChangeNameAlreadyOn: "ce mode est déjà activé.",
+			antiChangeThemeAlreadyOn: "ce mode est déjà activé.",
+			antiChangeEmojiAlreadyOn: "ce mode est déjà activé."
 		}
 	},
 	appstore: {
