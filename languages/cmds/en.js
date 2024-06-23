@@ -1,39 +1,39 @@
 module.exports = {
 	// You can customize the language here or directly in the command files
 	onlyadminbox: {
-		description: "turn on/off only admin box can use bot",
-		guide: "   {pn} [on | off]",
+		description: "sur on: seuls les admins du groupe peuvent utiliser le bot. \nsur off: tout le Monde peut utiliser le bot",
+		guide: "   {pn} [on | off] \ntape: \n {pn} onlyadminbox on \n {pn} onlyadminbox off ",
 		text: {
-			turnedOn: "Turned on the mode only admin of group can use bot",
-			turnedOff: "Turned off the mode only admin of group can use bot",
-			syntaxError: "Syntax error, only use {pn} on or {pn} off"
+			turnedOn: "utilisation du bot seulement par les admins du groupe activé.",
+			turnedOff: "utilisation du du bot seulement par admins du bot désactivé",
+			syntaxError: "tu as mal fait la demande. tape: \n {pn} onlyadminbox on \n {pn} onlyadminbox off "
 		}
 	},
 	adduser: {
-		description: "Add user to box chat of you",
-		guide: "   {pn} [link profile | uid]",
+		description: "ajouter un utilisateur dans un de tes groupes.",
+		guide: "tape: {pn} adduser [lien de son profil | son uid]",
 		text: {
-			alreadyInGroup: "Already in group",
-			successAdd: "- Successfully added %1 members to the group",
-			failedAdd: "- Failed to add %1 members to the group",
-			approve: "- Added %1 members to the approval list",
-			invalidLink: "Please enter a valid facebook link",
-			cannotGetUid: "Cannot get uid of this user",
-			linkNotExist: "This profile url does not exist",
-			cannotAddUser: "Bot is blocked or this user blocked strangers from adding to the group"
+			alreadyInGroup: "⚜️🌹.................................. \n \nIl est déjà dans le groupe",
+			successAdd: "⚜️🌹.................................. \n \n- l'utilisateur %1 est ajouté avec succès",
+			failedAdd: "⚜️🌹.................................. \n \n- l'ajout de l'utilisateur %1 n'a pas abouti.",
+			approve: "⚜️🌹.................................. \n \n- l'utilisateur %1 est ajouté avec succès à la liste d'approbation.",
+			invalidLink: "⚜️🌹.................................. \n \nveillez mettre un lien de profil valide",
+			cannotGetUid: "⚜️🌹.................................. \n \nc'est quoi cet uid ? je retrouve pas en tout cas.",
+			linkNotExist: "⚜️🌹.................................. \n \nce lien de profil n'existe pas",
+			cannotAddUser: "⚜️🌹.................................. \n \nsuis bloqué. l'utilisateur a peut-être paramétré son compte de façon à ce que tout le monde ne puisse l'ajouter à des groupes."
 		}
 	},
 	admin: {
-		description: "Add, remove, edit admin role",
-		guide: "   {pn} [add | -a] <uid>: Add admin role for user\n\t  {pn} [remove | -r] <uid>: Remove admin role of user\n\t  {pn} [list | -l]: List all admins",
+		description: "ajouter ou supprimer un admin du bot, modification du pouvoir d'admin",
+		guide: " {pn} admin [add | -a]: Ajouter un utilisateur aux admins du bot. \n\t  {pn} admin [remove | -r]: Supprimer un admin des admins du bot\n\t  {pn} admin [list | -l]: liste de tous les admins du bot.",
 		text: {
-			added: "✅ | Added admin role for %1 users:\n%2",
-			alreadyAdmin: "\n⚠️ | %1 users already have admin role:\n%2",
-			missingIdAdd: "⚠️ | Please enter ID or tag user to add admin role",
-			removed: "✅ | Removed admin role of %1 users:\n%2",
-			notAdmin: "⚠️ | %1 users don't have admin role:\n%2",
-			missingIdRemove: "⚠️ | Please enter ID or tag user to remove admin role",
-			listAdmin: "👑 | List of admins:\n%1"
+			added: "⚜️🌹.................................. \n \n✅ |%2 a été ajouté à la liste des admins",
+			alreadyAdmin: "⚜️🌹.................................. \n \n⚠️ | %2 est déjà admin du bot",
+			missingIdAdd: "⚜️🌹.................................. \n \n⚠️ | mets l'iuid de l'utilisateur ou mentionne-le.",
+			removed: "⚜️🌹.................................. \n \n✅ | %2 est supprimé de la liste des admins",
+			notAdmin: "⚜️🌹.................................. \n \n⚠️ |%2 n'est pas un admin.",
+			missingIdRemove: "⚜️🌹.................................. \n \n⚠️ | Please enter ID or tag user to remove admin role",
+			listAdmin: "⚜️🌹.................................. \n \n👑 | Liste des admins:\n%1"
 		}
 	},
 	adminonly: {
