@@ -2,7 +2,7 @@ module.exports = {
 	// You can customize the language here or directly in the command files
 	onlyadminbox: {
 		description: "sur on: seuls les admins du groupe peuvent utiliser le bot. \nsur off: tout le Monde peut utiliser le bot",
-		guide: "   {pn} [on | off] \ntape: \n {pn} onlyadminbox on \n {pn} onlyadminbox off ",
+		guide: "   {pn} [on | off] \ntape: \n {pn}  on \n {pn} off ",
 		text: {
 			turnedOn: "utilisation du bot seulement par les admins du groupe activé.",
 			turnedOff: "utilisation du du bot seulement par admins du bot désactivé",
@@ -11,7 +11,7 @@ module.exports = {
 	},
 	adduser: {
 		description: "ajouter un utilisateur dans un de tes groupes.",
-		guide: "tape: {pn} adduser [lien de son profil | son uid]",
+		guide: "tape: {pn}  [lien de son profil | son uid] ",
 		text: {
 			alreadyInGroup: "⚜️🌹.................................. \n \nIl est déjà dans le groupe",
 			successAdd: "⚜️🌹.................................. \n \n- l'utilisateur %1 est ajouté avec succès",
@@ -25,7 +25,7 @@ module.exports = {
 	},
 	admin: {
 		description: "ajouter ou supprimer un admin du bot, modification du pouvoir d'admin",
-		guide: " {pn} admin [add | -a]: Ajouter un utilisateur aux admins du bot. \n\t  {pn} admin [remove | -r]: Supprimer un admin des admins du bot\n\t  {pn} admin [list | -l]: liste de tous les admins du bot.",
+		guide: " {pn}  [add | -a]: Ajouter un utilisateur aux admins du bot. \n\t  {pn}  [remove | -r]: Supprimer un admin des admins du bot\n\t  {pn} admin [list | -l]: liste de tous les admins du bot.",
 		text: {
 			added: "⚜️🌹.................................. \n \n✅ |%2 a été ajouté à la liste des admins",
 			alreadyAdmin: "⚜️🌹.................................. \n \n⚠️ | %2 est déjà admin du bot",
@@ -38,7 +38,7 @@ module.exports = {
 	},
 	adminonly: {
 		description: "l'utilisation du bot par seuls les admins du bot.",
-		guide: "{pn} [on | off] \n {pn} adminonly on: pour activer l'utilisation du bot par seulement les admins du bot. \n {pn} adminonly off: pour désactiver l'utilisation du bot par les admins du bot seulement. ",
+		guide: "{pn} [on | off] \n {pn}  on: pour activer l'utilisation du bot par seulement les admins du bot. \n {pn} off: pour désactiver l'utilisation du bot par les admins du bot seulement. ",
 		text: {
 			turnedOn: "⚜️🌹.................................. \n \nl'utilisation du bot par seuls les admins du bot activée",
 			turnedOff: "⚜️🌹.................................. \n \nl'utilisation du bot par seuls les admins du bot désactivée. Tous peuvent maintenant utiliser les cmds",
@@ -47,7 +47,7 @@ module.exports = {
 	},
 	all: {
 		description: "mentionner tous les membres du groupe. écrire à tous.",
-		guide: "{pn} [content | empty] \n {pn} all message"
+		guide: "tape: {pn} message "
 	},
 	anime: {
 		description: "random anime image",
@@ -140,67 +140,67 @@ module.exports = {
 		}
 	},
 	balance: {
-		description: "view your money or the money of the tagged person",
-		guide: "   {pn}: view your money\n   {pn} <@tag>: view the money of the tagged person",
+		description: "consulter sa portefeuille ou celle de quelqu'un.",
+		guide: "   {pn}: pour consulter sa propre portefeuille.\n   {pn} @tag (tag de la personne): consulter la portefeuille de la personne mentionnée.",
 		text: {
-			money: "You have %1$",
-			moneyOf: "%1 has %2$"
+			money: "tu as %1$ dans ta portefeuille.",
+			moneyOf: "%1 a %2$ dans sa portefeuille."
 		}
 	},
 	batslap: {
-		description: "Batslap image",
+		description: "gifler quelqu'un en utilisant sa photo de profil.",
 		text: {
-			noTag: "You must tag the person you want to slap"
+			noTag: "tu dois mentionner celui que tu veux gifler. utilise @"
 		}
 	},
 	busy: {
-		description: "turn on do not disturb mode, when you are tagged bot will notify",
-		guide: "   {pn} [empty | <reason>]: turn on do not disturb mode\n   {pn} off: turn off do not disturb mode",
+		description: "mode busy (ne pas déranger): ne pas être être mentionné ou ne pas recevoir des notifications des messages dans lesquels on est tagué (mentionné).",
+		guide: "   {pn} [empty | <reason>] on: pour activer le mode busy (occupé).\n   {pn} off: pour désactiver le mode busy(occupé).",
 		text: {
-			turnedOff: "✅ | Do not disturb mode has been turned off",
-			turnedOn: "✅ | Do not disturb mode has been turned on",
-			turnedOnWithReason: "✅ | Do not disturb mode has been turned on with reason: %1",
-			alreadyOn: "User %1 is currently busy",
-			alreadyOnWithReason: "User %1 is currently busy with reason: %2"
+			turnedOff: "⚜️🌹.................................. \n \n✅ | mode busy (ne pas déranger) désactivé.",
+			turnedOn: "⚜️🌹.................................. \n \n✅ | mode busy (ne pas déranger) activité.",
+			turnedOnWithReason: "⚜️🌹.................................. \n \n✅ |mode (ne pas déranger) est activé avec comme raison: %1",
+			alreadyOn: "l'utilisateur %1 est déjà en mode busy (ne pas déranger).",
+			alreadyOnWithReason: " %1 est déjà en mode busy avec la raison : %2"
 		}
 	},
 	callad: {
-		description: "send report, feedback, bug,... to admin bot",
+		description: "envoyer de messages, des messages, des remarques aux admins du bot.",
 		guide: "   {pn} <message>",
 		text: {
-			missingMessage: "Please enter the message you want to send to admin",
-			sendByGroup: "\n- Sent from group: %1\n- Thread ID: %2",
-			sendByUser: "\n- Sent from user",
-			content: "\n\nContent:\n─────────────────\n%1\n─────────────────\nReply this message to send message to user",
-			success: "Sent your message to admin successfully!",
-			reply: "📍 Reply from admin %1:\n─────────────────\n%2\n─────────────────\nReply this message to continue send message to admin",
-			replySuccess: "Sent your reply to admin successfully!",
-			feedback: "📝 Feedback from user %1:\n- User ID: %2%3\n\nContent:\n─────────────────\n%4\n─────────────────\nReply this message to send message to user",
-			replyUserSuccess: "Sent your reply to user successfully!"
+			missingMessage: "⚜️🌹.................................. \n \n❌tu n'as pas mis le message que tu veux adresser aux admins",
+			sendByGroup: "⚜️🌹.................................. \n \nmessage venant du groupe: %1\n- tid du groupe: %2",
+			sendByUser: "\n- Envoyé par: ",
+			content: "\n\nContenu:\n─────────────────\n%1\n─────────────────\nRéponds à ce message pour répondre à l'utilisateur",
+			success: "✔️ Message envoyé aux admins du bot avec succès.",
+			reply: "📍 Réponse de l'admin %1:\n─────────────────\n%2\n─────────────────\nRéponds à ce message pour continuer à discuter avec l'admin.",
+			replySuccess: "Réponse envoyée à l'admin avec succès.",
+			feedback: "📝 Réponse de %1:\n-  ID: %2%3\n\nContenu:\n─────────────────\n%4\n─────────────────\nRéponds à ce message pour continuer la discussion avec l'utilisateur.",
+			replyUserSuccess: "Réponse envoyée à l'utilisateur avec succès."
 		}
 	},
 	cmd: {
-		description: "Manage your command files",
-		guide: "{pn} load <command file name>\n{pn} loadAll\n{pn} install <url> <command file name>: Download and install a command file from a url, url is the path to the file (raw)",
+		description: " ajouter, retirer, modifier les fichiers des cmds du bot.",
+		guide: " - {pn} load <command file name>: pour rajouter une cmd \n - {pn} loadAll: rajouter toutes les cmds enlevées. \n - {pn} install <lien du fichier> <fichier de la commande> nom.js: télécharger et installer le fichier d'une cmd.",
 		text: {
-			missingFileName: "⚠️ | Please enter the command name you want to reload",
-			loaded: "✅ | Loaded command \"%1\" successfully",
-			loadedError: "❌ | Failed to load command \"%1\" with error\n%2: %3",
-			loadedSuccess: "✅ | Loaded successfully \"%1\" command",
-			loadedFail: "❌ | Failed to load \"%1\" command\n%2",
-			missingCommandNameUnload: "⚠️ | Please enter the command name you want to unload",
-			unloaded: "✅ | Unloaded command \"%1\" successfully",
-			unloadedError: "❌ | Failed to unload command \"%1\" with error\n%2: %3",
-			missingUrlCodeOrFileName: "⚠️ | Please enter the url or code and command file name you want to install",
-			missingUrlOrCode: "⚠️ | Please enter the url or code of the command file you want to install",
-			missingFileNameInstall: "⚠️ | Please enter the file name to save the command (with .js extension)",
-			invalidUrlOrCode: "⚠️ | Unable to get command code",
-			alreadExist: "⚠️ | The command file already exists, are you sure you want to overwrite the old command file?\nReact to this message to continue",
-			installed: "✅ | Installed command \"%1\" successfully, the command file is saved at %2",
-			installedError: "❌ | Failed to install command \"%1\" with error\n%2: %3",
-			missingFile: "⚠️ | Command file \"%1\" not found",
-			invalidFileName: "⚠️ | Invalid command file name",
-			unloadedFile: "✅ | Unloaded command \"%1\""
+			missingFileName: "⚜️🌹.................................. \n \n⚠️ | tu n'as pas mis le nom de la cmd que tu veux rajouter.",
+			loaded: "⚜️🌹.................................. \n \n✅ | commande \"%1\" ajoutée avec succès.",
+			loadedError: "⚜️🌹.................................. \n \n❌ | il y a une erreur. échec du rajout de la cmd \"%1\". \n%2: %3",
+			loadedSuccess: "⚜️🌹.................................. \n \n✅ | la commande \"%1\" est ajoutée avec succès.",
+			loadedFail: "❌ | échec du rajout de la cmd \"%1\". \n%2",
+			missingCommandNameUnload: "⚜️🌹.................................. \n \n⚠️ | tu n'as pas mis le nom de la cmd que tu veux enlever.",
+			unloaded: "⚜️🌹.................................. \n \n✅ | la cmd \"%1\" est enlevée avec succès",
+			unloadedError: "⚜️🌹.................................. \n \n❌ | il y a une erreur. échec de la suppression de la cmd \"%1".\n%2: %3",
+			missingUrlCodeOrFileName: "⚜️🌹.................................. \n \n⚠️ | tu n'as pas mis le nom du lien ou du code ou du fichier de la cmd",
+			missingUrlOrCode: "⚜️🌹.................................. \n \n⚠️ | ah! tu n'as pas mis le lien ou le fichier ou le code de la cmd que tu veux installer.",
+			missingFileNameInstall: "⚜️🌹.................................. \n \n⚠️ | ah! tu n'as pas mis le nom du fichier que tu veux installer. (ex: nom.js)",
+			invalidUrlOrCode: "⚜️🌹.................................. \n \n⚠️ | ce lien n'est pas valide.",
+			alreadExist: "⚜️🌹.................................. \n \n⚠️ | ce fichier est déjà installé. tu es sûr de vouloir remplacer l'ancien ficher?\nsi oui, réagit à ce message pour le changer.",
+			installed: "⚜️🌹.................................. \n \n✅ | la cmd \"%1\" est installée avec succès. elle est installée dans %2",
+			installedError: "⚜️🌹.................................. \n \n❌ | il y a une erreur. la cmd \"%1\" ne peut être installé. \n%2: %3",
+			missingFile: "⚜️🌹.................................. \n \n⚠️ | la cmd \"%1\" est introuvable. tu n'as pas mis le fichier.",
+			invalidFileName: "⚠️ | nom du ficher invalide ",
+			unloadedFile: "✅ | le fichier de \"%1\" est enlevé avec succès."
 		}
 	},
 	count: {
