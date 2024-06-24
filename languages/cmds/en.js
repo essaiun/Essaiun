@@ -1,53 +1,53 @@
 module.exports = {
 	// You can customize the language here or directly in the command files
 	onlyadminbox: {
-		description: "sur on: seuls les admins du groupe peuvent utiliser le bot. \nsur off: tout le Monde peut utiliser le bot",
-		guide: "   {pn} [on | off] \ntape: \n {pn}  on \n {pn} off ",
+		description: "turn on/off only admin box can use bot",
+		guide: "   {pn} [on | off]",
 		text: {
-			turnedOn: "utilisation du bot seulement par les admins du groupe activé.",
-			turnedOff: "utilisation du du bot seulement par admins du bot désactivé",
-			syntaxError: "tu as mal fait la demande. tape: \n {pn} onlyadminbox on \n {pn} onlyadminbox off "
+			turnedOn: "Turned on the mode only admin of group can use bot",
+			turnedOff: "Turned off the mode only admin of group can use bot",
+			syntaxError: "Syntax error, only use {pn} on or {pn} off"
 		}
 	},
 	adduser: {
-		description: "ajouter un utilisateur dans un de tes groupes.",
-		guide: "tape: {pn}  [lien de son profil | son uid] ",
+		description: "Add user to box chat of you",
+		guide: "   {pn} [link profile | uid]",
 		text: {
-			alreadyInGroup: "⚜️🌹.................................. \n \nIl est déjà dans le groupe",
-			successAdd: "⚜️🌹.................................. \n \n- l'utilisateur %1 est ajouté avec succès",
-			failedAdd: "⚜️🌹.................................. \n \n- l'ajout de l'utilisateur %1 n'a pas abouti.",
-			approve: "⚜️🌹.................................. \n \n- l'utilisateur %1 est ajouté avec succès à la liste d'approbation.",
-			invalidLink: "⚜️🌹.................................. \n \nveillez mettre un lien de profil valide",
-			cannotGetUid: "⚜️🌹.................................. \n \nc'est quoi cet uid ? je retrouve pas en tout cas.",
-			linkNotExist: "⚜️🌹.................................. \n \nce lien de profil n'existe pas",
-			cannotAddUser: "⚜️🌹.................................. \n \nsuis bloqué. l'utilisateur a peut-être paramétré son compte de façon à ce que tout le monde ne puisse l'ajouter à des groupes."
+			alreadyInGroup: "Already in group",
+			successAdd: "- Successfully added %1 members to the group",
+			failedAdd: "- Failed to add %1 members to the group",
+			approve: "- Added %1 members to the approval list",
+			invalidLink: "Please enter a valid facebook link",
+			cannotGetUid: "Cannot get uid of this user",
+			linkNotExist: "This profile url does not exist",
+			cannotAddUser: "Bot is blocked or this user blocked strangers from adding to the group"
 		}
 	},
 	admin: {
-		description: "ajouter ou supprimer un admin du bot, modification du pouvoir d'admin",
-		guide: " {pn}  [add | -a]: Ajouter un utilisateur aux admins du bot. \n\t  {pn}  [remove | -r]: Supprimer un admin des admins du bot\n\t  {pn} admin [list | -l]: liste de tous les admins du bot.",
+		description: "Add, remove, edit admin role",
+		guide: "   {pn} [add | -a] <uid>: Add admin role for user\n\t  {pn} [remove | -r] <uid>: Remove admin role of user\n\t  {pn} [list | -l]: List all admins",
 		text: {
-			added: "⚜️🌹.................................. \n \n✅ |%2 a été ajouté à la liste des admins",
-			alreadyAdmin: "⚜️🌹.................................. \n \n⚠️ | %2 est déjà admin du bot",
-			missingIdAdd: "⚜️🌹.................................. \n \n⚠️ | mets l'iuid de l'utilisateur ou mentionne-le.",
-			removed: "⚜️🌹.................................. \n \n✅ | %2 est supprimé de la liste des admins",
-			notAdmin: "⚜️🌹.................................. \n \n⚠️ |%2 n'est pas un admin.",
-			missingIdRemove: "⚜️🌹.................................. \n \n⚠️ | Please enter ID or tag user to remove admin role",
-			listAdmin: "⚜️🌹.................................. \n \n👑 | Liste des admins:\n%1"
+			added: "✅ | Added admin role for %1 users:\n%2",
+			alreadyAdmin: "\n⚠️ | %1 users already have admin role:\n%2",
+			missingIdAdd: "⚠️ | Please enter ID or tag user to add admin role",
+			removed: "✅ | Removed admin role of %1 users:\n%2",
+			notAdmin: "⚠️ | %1 users don't have admin role:\n%2",
+			missingIdRemove: "⚠️ | Please enter ID or tag user to remove admin role",
+			listAdmin: "👑 | List of admins:\n%1"
 		}
 	},
 	adminonly: {
-		description: "l'utilisation du bot par seuls les admins du bot.",
-		guide: "{pn} [on | off] \n {pn}  on: pour activer l'utilisation du bot par seulement les admins du bot. \n {pn} off: pour désactiver l'utilisation du bot par les admins du bot seulement. ",
+		description: "turn on/off only admin can use bot",
+		guide: "{pn} [on | off]",
 		text: {
-			turnedOn: "⚜️🌹.................................. \n \nl'utilisation du bot par seuls les admins du bot activée",
-			turnedOff: "⚜️🌹.................................. \n \nl'utilisation du bot par seuls les admins du bot désactivée. Tous peuvent maintenant utiliser les cmds",
-			syntaxError: "⚜️🌹.................................. \n \nErreur dans la composition. tape help adminonly pour voir comment t'y prendre."
+			turnedOn: "Turned on the mode only admin can use bot",
+			turnedOff: "Turned off the mode only admin can use bot",
+			syntaxError: "Syntax error, only use {pn} on or {pn} off"
 		}
 	},
 	all: {
-		description: "mentionner tous les membres du groupe. écrire à tous.",
-		guide: "tape: {pn} message "
+		description: "Tag all members in your group chat",
+		guide: "{pn} [content | empty]"
 	},
 	anime: {
 		description: "random anime image",
@@ -58,22 +58,22 @@ module.exports = {
 		}
 	},
 	antichangeinfobox: {
-		description: "empêcher le changement des caractéristiques du groupe: nom, photo de profil, thème, réaction rapide.",
-		guide: "   {pn} avt on  ou  {pn} avt off: empêcher ou permettre de changer la photo de profil du groupe.\n   {pn} name on  ou  {pn} name off: empêcher ou permettre de changer le nom du groupe.\n   {pn} theme on  ou  {pn} theme off: empêcher ou permettre de changer le thème du groupe.\n   {pn} emoji on  ou  {pn} off: empêcher ou permettre de changer la réaction rapide du groupe.",
+		description: "Turn on/off anti change info box",
+		guide: "   {pn} avt [on | off]: anti change avatar box chat\n   {pn} name [on | off]: anti change name box chat\n   {pn} theme [on | off]: anti change theme (chủ đề) box chat\n   {pn} emoji [on | off]: anti change emoji box chat",
 		text: {
-			antiChangeAvatarOn: "⚜️🌹.................................. \n \n✔️| seuls les admins du groupe peuvent désormais changer la photo du groupe.",
-			antiChangeAvatarOff: "⚜️🌹.................................. \n \nle changement de photo de profil du groupe par seuls les admins du groupe désactivé.",
-			missingAvt: "⚜️🌹.................................. \n \n❌| tu n'as pas indiqué ce qu'il faut bloquer ou autoriser. avt , name , theme ou emoji ?",
-			antiChangeNameOn: "⚜️🌹.................................. \n \n✔️| seuls les admins du groupe peuvent changer le nom du groupe désormais.",
-			antiChangeNameOff: "⚜️🌹.................................. \n \nle changement du nom du groupe par seuls les admins du groupe désactivé. ",
-			antiChangeThemeOn: "⚜️🌹.................................. \n \n ✔️| seuls les admins du groupe peuvent changer le thème du groupe désormais.",
-			antiChangeThemeOff: "⚜️🌹.................................. \n \nle changement du thème du groupe par seuls les admins du groupe désactivé.",
-			antiChangeEmojiOn: "⚜️🌹.................................. \n \n✔️| seuls les admins du groupe peuvent changer la réaction rapide dorénavant.",
-			antiChangeEmojiOff: "le changement de la réaction rapide par seuls les admins du groupe désactivé.",
-			antiChangeAvatarAlreadyOn: "ce mode est déjà activé.",
-			antiChangeNameAlreadyOn: "ce mode est déjà activé.",
-			antiChangeThemeAlreadyOn: "ce mode est déjà activé.",
-			antiChangeEmojiAlreadyOn: "ce mode est déjà activé."
+			antiChangeAvatarOn: "Turn on anti change avatar box chat",
+			antiChangeAvatarOff: "Turn off anti change avatar box chat",
+			missingAvt: "You have not set avatar for box chat",
+			antiChangeNameOn: "Turn on anti change name box chat",
+			antiChangeNameOff: "Turn off anti change name box chat",
+			antiChangeThemeOn: "Turn on anti change theme box chat",
+			antiChangeThemeOff: "Turn off anti change theme box chat",
+			antiChangeEmojiOn: "Turn on anti change emoji box chat",
+			antiChangeEmojiOff: "Turn off anti change emoji box chat",
+			antiChangeAvatarAlreadyOn: "Your box chat is currently on anti change avatar",
+			antiChangeNameAlreadyOn: "Your box chat is currently on anti change name",
+			antiChangeThemeAlreadyOn: "Your box chat is currently on anti change theme",
+			antiChangeEmojiAlreadyOn: "Your box chat is currently on anti change emoji"
 		}
 	},
 	appstore: {
@@ -140,80 +140,80 @@ module.exports = {
 		}
 	},
 	balance: {
-		description: "consulter sa portefeuille ou celle de quelqu'un.",
-		guide: "   {pn}: pour consulter sa propre portefeuille.\n   {pn} @tag (tag de la personne): consulter la portefeuille de la personne mentionnée.",
+		description: "view your money or the money of the tagged person",
+		guide: "   {pn}: view your money\n   {pn} <@tag>: view the money of the tagged person",
 		text: {
-			money: "tu as %1$ dans ta portefeuille.",
-			moneyOf: "%1 a %2$ dans sa portefeuille."
+			money: "You have %1$",
+			moneyOf: "%1 has %2$"
 		}
 	},
 	batslap: {
-		description: "gifler quelqu'un en utilisant sa photo de profil.",
+		description: "Batslap image",
 		text: {
-			noTag: "tu dois mentionner celui que tu veux gifler. utilise @"
+			noTag: "You must tag the person you want to slap"
 		}
 	},
 	busy: {
-		description: "mode busy (ne pas déranger): ne pas être être mentionné ou ne pas recevoir des notifications des messages dans lesquels on est tagué (mentionné).",
-		guide: "   {pn} [empty | <reason>] on: pour activer le mode busy (occupé).\n   {pn} off: pour désactiver le mode busy(occupé).",
+		description: "turn on do not disturb mode, when you are tagged bot will notify",
+		guide: "   {pn} [empty | <reason>]: turn on do not disturb mode\n   {pn} off: turn off do not disturb mode",
 		text: {
-			turnedOff: "⚜️🌹.................................. \n \n✅ | mode busy (ne pas déranger) désactivé.",
-			turnedOn: "⚜️🌹.................................. \n \n✅ | mode busy (ne pas déranger) activité.",
-			turnedOnWithReason: "⚜️🌹.................................. \n \n✅ |mode (ne pas déranger) est activé avec comme raison: %1",
-			alreadyOn: "l'utilisateur %1 est déjà en mode busy (ne pas déranger).",
-			alreadyOnWithReason: " %1 est déjà en mode busy avec la raison : %2"
+			turnedOff: "✅ | Do not disturb mode has been turned off",
+			turnedOn: "✅ | Do not disturb mode has been turned on",
+			turnedOnWithReason: "✅ | Do not disturb mode has been turned on with reason: %1",
+			alreadyOn: "User %1 is currently busy",
+			alreadyOnWithReason: "User %1 is currently busy with reason: %2"
 		}
 	},
 	callad: {
-		description: "envoyer de messages, des messages, des remarques aux admins du bot.",
+		description: "send report, feedback, bug,... to admin bot",
 		guide: "   {pn} <message>",
 		text: {
-			missingMessage: "⚜️🌹.................................. \n \n❌tu n'as pas mis le message que tu veux adresser aux admins",
-			sendByGroup: "⚜️🌹.................................. \n \nmessage venant du groupe: %1\n- tid du groupe: %2",
-			sendByUser: "\n- Envoyé par: ",
-			content: "\n\nContenu:\n─────────────────\n%1\n─────────────────\nRéponds à ce message pour répondre à l'utilisateur",
-			success: "✔️ Message envoyé aux admins du bot avec succès.",
-			reply: "📍 Réponse de l'admin %1:\n─────────────────\n%2\n─────────────────\nRéponds à ce message pour continuer à discuter avec l'admin.",
-			replySuccess: "Réponse envoyée à l'admin avec succès.",
-			feedback: "📝 Réponse de %1:\n-  ID: %2%3\n\nContenu:\n─────────────────\n%4\n─────────────────\nRéponds à ce message pour continuer la discussion avec l'utilisateur.",
-			replyUserSuccess: "Réponse envoyée à l'utilisateur avec succès."
+			missingMessage: "Please enter the message you want to send to admin",
+			sendByGroup: "\n- Sent from group: %1\n- Thread ID: %2",
+			sendByUser: "\n- Sent from user",
+			content: "\n\nContent:\n─────────────────\n%1\n─────────────────\nReply this message to send message to user",
+			success: "Sent your message to admin successfully!",
+			reply: "📍 Reply from admin %1:\n─────────────────\n%2\n─────────────────\nReply this message to continue send message to admin",
+			replySuccess: "Sent your reply to admin successfully!",
+			feedback: "📝 Feedback from user %1:\n- User ID: %2%3\n\nContent:\n─────────────────\n%4\n─────────────────\nReply this message to send message to user",
+			replyUserSuccess: "Sent your reply to user successfully!"
 		}
 	},
 	cmd: {
-		description: " ajouter, retirer, modifier les fichiers des cmds du bot.",
-		guide: " - {pn} load <command file name>: pour rajouter une cmd \n - {pn} loadAll: rajouter toutes les cmds enlevées. \n - {pn} install <lien du fichier> <fichier de la commande> nom.js: télécharger et installer le fichier d'une cmd.",
+		description: "Manage your command files",
+		guide: "{pn} load <command file name>\n{pn} loadAll\n{pn} install <url> <command file name>: Download and install a command file from a url, url is the path to the file (raw)",
 		text: {
-			missingFileName: "⚜️🌹.................................. \n \n⚠️ | tu n'as pas mis le nom de la cmd que tu veux rajouter.",
-			loaded: "⚜️🌹.................................. \n \n✅ | commande \"%1\" ajoutée avec succès.",
-			loadedError: "⚜️🌹.................................. \n \n❌ | il y a une erreur. échec du rajout de la cmd \"%1\". \n%2: %3",
-			loadedSuccess: "⚜️🌹.................................. \n \n✅ | la commande \"%1\" est ajoutée avec succès.",
-			loadedFail: "❌ | échec du rajout de la cmd \"%1\". \n%2",
-			missingCommandNameUnload: "⚜️🌹.................................. \n \n⚠️ | tu n'as pas mis le nom de la cmd que tu veux enlever.",
-			unloaded: "⚜️🌹.................................. \n \n✅ | la cmd \"%1\" est enlevée avec succès",
-			unloadedError: "⚜️🌹.................................. \n \n❌ | il y a une erreur. échec de la suppression de la cmd \"%1".\n%2: %3",
-			missingUrlCodeOrFileName: "⚜️🌹.................................. \n \n⚠️ | tu n'as pas mis le nom du lien ou du code ou du fichier de la cmd",
-			missingUrlOrCode: "⚜️🌹.................................. \n \n⚠️ | ah! tu n'as pas mis le lien ou le fichier ou le code de la cmd que tu veux installer.",
-			missingFileNameInstall: "⚜️🌹.................................. \n \n⚠️ | ah! tu n'as pas mis le nom du fichier que tu veux installer. (ex: nom.js)",
-			invalidUrlOrCode: "⚜️🌹.................................. \n \n⚠️ | ce lien n'est pas valide.",
-			alreadExist: "⚜️🌹.................................. \n \n⚠️ | ce fichier est déjà installé. tu es sûr de vouloir remplacer l'ancien ficher?\nsi oui, réagit à ce message pour le changer.",
-			installed: "⚜️🌹.................................. \n \n✅ | la cmd \"%1\" est installée avec succès. elle est installée dans %2",
-			installedError: "⚜️🌹.................................. \n \n❌ | il y a une erreur. la cmd \"%1\" ne peut être installé. \n%2: %3",
-			missingFile: "⚜️🌹.................................. \n \n⚠️ | la cmd \"%1\" est introuvable. tu n'as pas mis le fichier.",
-			invalidFileName: "⚠️ | nom du ficher invalide ",
-			unloadedFile: "✅ | le fichier de \"%1\" est enlevé avec succès."
+			missingFileName: "⚠️ | Please enter the command name you want to reload",
+			loaded: "✅ | Loaded command \"%1\" successfully",
+			loadedError: "❌ | Failed to load command \"%1\" with error\n%2: %3",
+			loadedSuccess: "✅ | Loaded successfully \"%1\" command",
+			loadedFail: "❌ | Failed to load \"%1\" command\n%2",
+			missingCommandNameUnload: "⚠️ | Please enter the command name you want to unload",
+			unloaded: "✅ | Unloaded command \"%1\" successfully",
+			unloadedError: "❌ | Failed to unload command \"%1\" with error\n%2: %3",
+			missingUrlCodeOrFileName: "⚠️ | Please enter the url or code and command file name you want to install",
+			missingUrlOrCode: "⚠️ | Please enter the url or code of the command file you want to install",
+			missingFileNameInstall: "⚠️ | Please enter the file name to save the command (with .js extension)",
+			invalidUrlOrCode: "⚠️ | Unable to get command code",
+			alreadExist: "⚠️ | The command file already exists, are you sure you want to overwrite the old command file?\nReact to this message to continue",
+			installed: "✅ | Installed command \"%1\" successfully, the command file is saved at %2",
+			installedError: "❌ | Failed to install command \"%1\" with error\n%2: %3",
+			missingFile: "⚠️ | Command file \"%1\" not found",
+			invalidFileName: "⚠️ | Invalid command file name",
+			unloadedFile: "✅ | Unloaded command \"%1\""
 		}
 	},
 	count: {
-		description: "permet de voir le nombre de messages que les membres du groupe ont écrit ou qu'on a écrit soi-même(c'est à noter que le bot n'affichera que les messages envoyés par les membres à partir du moment où il est ajouté au groupe.",
-		guide: "   {pn}: pour voir le nombre de messages écrits soi-même.\n   {pn} @tag: pour voir le nombre de messages écrits par l'utilisateur mentionné.\n   {pn} all: pour voir le nombre de messages écrits par tout le monde depuis que le bot est ajouté au groupe.",
+		description: "View the number of messages of all members or yourself (since the bot joined the group)",
+		guide: "   {pn}: used to view the number of messages of you\n   {pn} @tag: used to view the number of messages of those tagged\n   {pn} all: used to view the number of messages of all members",
 		text: {
-			count: "nombre de messages des membres du groupe: \n",
-			endMessage: "\n ceux qui n'ont pas leur noms sur la liste n'ont tout simplement pas envoyé de messages dans le groupe.",
-			page: "Page [%1/%2]"
-			reply: "réponds à ce message avec le nombre de la page que tu veux pour voir plus.",
-			result: "%1 rang %2 avec %3 messages",
-			yourResult: "tu es au rang  %1 avec %2 messages envoyés dans le groupe.",
-			invalidPage: "le nombre de page que tu demandes n'est pas valide."
+			count: "Number of messages of members:",
+			endMessage: "Those who do not have a name in the list have not sent any messages.",
+			page: "Page [%1/%2]",
+			reply: "Reply to this message with the page number to view more",
+			result: "%1 rank %2 with %3 messages",
+			yourResult: "You are ranked %1 and have sent %2 messages in this group",
+			invalidPage: "Invalid page number"
 		}
 	},
 	customrankcard: {
@@ -266,8 +266,8 @@ module.exports = {
 		}
 	},
 	emojimix: {
-		description: "fusionner deux emoji",
-		guide: "   {pn} <emoji1> <emoji2>\n   Exemple:  {pn} 🤣 🥰"
+		description: "Mix 2 emoji together",
+		guide: "   {pn} <emoji1> <emoji2>\n   Example:  {pn} 🤣 🥰"
 	},
 	eval: {
 		description: "Test code quickly",
@@ -301,16 +301,16 @@ module.exports = {
 		}
 	},
 	filteruser: {
-		description: "supprimer les membres par nombre de messages envoyés dans le groupe, et les comptes bloqués.",
-		guide: "   {pn} <nombre de messages> : le bot supprimera tous les membres qui n'ont pas envoyé un nombre de message supérieur au nombre indiqué. \n {pn} died : le bot supprimera les comptes bloqués du groupe. \n noter que le bot a besoin d'être admin du groupe pour pouvoir effectuer ces demandes.",
+		description: "filter group members by number of messages or locked account",
+		guide: "   {pn} [<number of messages> | die]",
 		text: {
-			needAdmin: "⚠️ | ajoutez le bot aux admins du groupe pour effectuer cette demande.",
-			confirm: "⚠️ | es-tu sûr de vouloir supprimer les membres ayant envoyé un nombre de messages inférieur à %1 ?\n \n mets une réaction sur ce message pour confirmer.",
-			kickByBlock: "⚜️🌹.................................. \n \n✅ | les membres ( %1 ) qui ont leur compte bloqué sont supprimés avec succès.",
-			kickByMsg: "✅ les %1 membres avec un nombre de messages inférieur à %2 sont supprimés avec succès.",
-			kickError: "❌ | il y a erreur.  %1 membre(s) n'a (n'ont) pas pu être supprimé(s):\n%2",
-			noBlock: "✅ | il n'y a aucun compte bloqué dans le groupe.",
-			noMsg: "✅ | aucun membre avec un nombre de messages envoyés inférieur à %1"
+			needAdmin: "⚠️ | Please add the bot as a group admin to use this command",
+			confirm: "⚠️ | Are you sure you want to delete group members with less than %1 messages?\nReact to this message to confirm",
+			kickByBlock: "✅ | Successfully deleted %1 members who are locked acc",
+			kickByMsg: "✅ | Successfully deleted %1 members with less than %2 messages",
+			kickError: "❌ | An error occurred and could not kick %1 members:\n%2",
+			noBlock: "✅ | There are no members who are locked acc",
+			noMsg: "✅ | There are no members with less than %1 messages"
 		}
 	},
 	getfbstate: {
@@ -321,14 +321,14 @@ module.exports = {
 		}
 	},
 	grouptag: {
-		description: "créer un groupe de notification/de discussion.",
-		guide: "   {pn} add <nom du groupe> <@tags>:pour ajouter un groupe de discussion ou ajouter un membre au groupe de notification.\n   Example:\n    {pn} GROUP1 @tag1 @tag2\n\n   {pn} del <nom du groupe> <@tags> : pour supprimer des utilisateurs du groupe de notification \n   Example:\n    {pn} del GROUP1 @tag1 @tag2\n\n   {pn} remove <nom du groupe>:pour supprimer les groupes de notification.\n   Example:\n    {pn} remove GROUP1\n\n   {pn} rename <nom du groupe> | <nouveau nom du groupe>: pour renommer les groupes de notification.\n\n   {pn} [list | all]: pour voir la liste des groupes de notification.\n\n   {pn} info <nom du groupe>: pour voir les informations concernant le groupe mentionné.",
+		description: "Tag members by group",
+		guide: "   {pn} add <groupTagName> <@tags>: use to add new group tag or add members to group tag\n   Example:\n    {pn} TEAM1 @tag1 @tag2\n\n   {pn} del <groupTagName> <@tags>: use to remove members from group tag\n   Example:\n    {pn} del TEAM1 @tag1 @tag2\n\n   {pn} remove <groupTagName>: use to remove group tag\n   Example:\n    {pn} remove TEAM1\n\n   {pn} rename <groupTagName> | <newGroupTagName>: use to rename group tag\n\n   {pn} [list | all]: use to view list of group tag in your group chat\n\n   {pn} info <groupTagName>: use to view info of group tag",
 		text: {
-			noGroupTagName: "⚜️🌹.................................. \n \n❌ | tu n'as pas mis le nom du goupe..!!",
-			noMention: "⚜️🌹.................................. \n \n❌tu n'as mentionné aucun membre à ajouter au groupe. ",
-			addedSuccess: "⚜️🌹.................................. \n \n✔️les membres :\n%1\nsont ajoutés au groupe\"%2\"",
-			addedSuccess2: "le groupe \"%1\" est créé avec comme membres:\n%2",
-			existedInGroupTag: "Members:\n%1\nalready existed in https://github.com/AnhDerrick/Anh.git tag \"%2\"",
+			noGroupTagName: "Please enter group tag name",
+			noMention: "You haven't tagged any member to add to group tag",
+			addedSuccess: "Added members:\n%1\nto group tag \"%2\"",
+			addedSuccess2: "Added group tag \"%1\" with members:\n%2",
+			existedInGroupTag: "Members:\n%1\nalready existed in group tag \"%2\"",
 			notExistedInGroupTag: "Members:\n%1\ndoesn't exist in group tag \"%2\"",
 			noExistedGroupTag: "Group tag \"%1\" doesn't exist in your group chat",
 			noExistedGroupTag2: "Your group chat hasn't added any group tag",
@@ -342,8 +342,8 @@ module.exports = {
 		}
 	},
 	help: {
-		description: "Voir les cmds et leur fonction et leur mode d'utilisation.",
-		guide: "{pn} : pour voir les commandes. \n {pn} <nombre de la page> : pour voir les cmds qui sont sur la page précisée. \n {pn} <nom de la cmd> : pour voir le fonctionnement et l'utilité de la cmd mentionnée.",
+		description: "View command usage",
+		guide: "{pn} [empty | <page number> | <command name>]",
 		text: {
 			help: "╭─────────────⭓\n%1\n├─────⭔\n│ Page [ %2/%3 ]\n│ Currently, the bot has %4 commands that can be used\n│ » Type %5help <page> to view the command list\n│ » Type %5help to view the details of how to use that command\n├────────⭔\n│ %6\n╰─────────────⭓",
 			help2: "%1├───────⭔\n│ » Currently, the bot has %2 commands that can be used\n│ » Type %3help <command name> to view the details of how to use that command\n│ %4\n╰─────────────⭓",
@@ -683,7 +683,7 @@ module.exports = {
 		guide: "{pn} <location>",
 		text: {
 			syntaxError: "Please enter a location",
-			notFound: "Location not found: %1",
+			notFound: "Location not found: %1", 
 			error: "An error has occurred: %1",
 			today: "Today's weather:\n%1\n🌡 Low - high temperature %2°C - %3°C\n🌡 Feels like %4°C - %5°C\n🌅 Sunrise %6\n🌄 Sunset %7\n🌃 Moonrise %8\n🏙️ Moonset %9\n🌞 Day: %10\n🌙 Night: %11"
 		}
