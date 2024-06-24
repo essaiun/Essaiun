@@ -204,16 +204,16 @@ module.exports = {
 		}
 	},
 	count: {
-		description: "View the number of messages of all members or yourself (since the bot joined the group)",
-		guide: "   {pn}: used to view the number of messages of you\n   {pn} @tag: used to view the number of messages of those tagged\n   {pn} all: used to view the number of messages of all members",
+		description: "permet de voir le nombre de messages que les membres du groupe ont écrit ou qu'on a écrit soi-même(c'est à noter que le bot n'affichera que les messages envoyés par les membres à partir du moment où il est ajouté au groupe.",
+		guide: "   {pn}: pour voir le nombre de messages écrits soi-même.\n   {pn} @tag: pour voir le nombre de messages écrits par l'utilisateur mentionné.\n   {pn} all: pour voir le nombre de messages écrits par tout le monde depuis que le bot est ajouté au groupe.",
 		text: {
-			count: "Number of messages of members:",
-			endMessage: "Those who do not have a name in the list have not sent any messages.",
-			page: "Page [%1/%2]",
-			reply: "Reply to this message with the page number to view more",
-			result: "%1 rank %2 with %3 messages",
-			yourResult: "You are ranked %1 and have sent %2 messages in this group",
-			invalidPage: "Invalid page number"
+			count: "nombre de messages des membres du groupe: \n",
+			endMessage: "\n ceux qui n'ont pas leur noms sur la liste n'ont tout simplement pas envoyé de messages dans le groupe.",
+			page: "Page [%1/%2]"
+			reply: "réponds à ce message avec le nombre de la page que tu veux pour voir plus.",
+			result: "%1 rang %2 avec %3 messages",
+			yourResult: "tu es au rang  %1 avec %2 messages envoyés dans le groupe.",
+			invalidPage: "le nombre de page que tu demandes n'est pas valide."
 		}
 	},
 	customrankcard: {
@@ -266,8 +266,8 @@ module.exports = {
 		}
 	},
 	emojimix: {
-		description: "Mix 2 emoji together",
-		guide: "   {pn} <emoji1> <emoji2>\n   Example:  {pn} 🤣 🥰"
+		description: "fusionner deux emoji",
+		guide: "   {pn} <emoji1> <emoji2>\n   Exemple:  {pn} 🤣 🥰"
 	},
 	eval: {
 		description: "Test code quickly",
@@ -301,16 +301,16 @@ module.exports = {
 		}
 	},
 	filteruser: {
-		description: "filter group members by number of messages or locked account",
-		guide: "   {pn} [<number of messages> | die]",
+		description: "supprimer les membres par nombre de messages envoyés dans le groupe, et les comptes bloqués.",
+		guide: "   {pn} <nombre de messages> : le bot supprimera tous les membres qui n'ont pas envoyé un nombre de message supérieur au nombre indiqué. \n {pn} died : le bot supprimera les comptes bloqués du groupe. \n noter que le bot a besoin d'être admin du groupe pour pouvoir effectuer ces demandes.",
 		text: {
-			needAdmin: "⚠️ | Please add the bot as a group admin to use this command",
-			confirm: "⚠️ | Are you sure you want to delete group members with less than %1 messages?\nReact to this message to confirm",
-			kickByBlock: "✅ | Successfully deleted %1 members who are locked acc",
-			kickByMsg: "✅ | Successfully deleted %1 members with less than %2 messages",
-			kickError: "❌ | An error occurred and could not kick %1 members:\n%2",
-			noBlock: "✅ | There are no members who are locked acc",
-			noMsg: "✅ | There are no members with less than %1 messages"
+			needAdmin: "⚠️ | ajoutez le bot aux admins du groupe pour effectuer cette demande.",
+			confirm: "⚠️ | es-tu sûr de vouloir supprimer les membres ayant envoyé un nombre de messages inférieur à %1 ?\n \n mets une réaction sur ce message pour confirmer.",
+			kickByBlock: "⚜️🌹.................................. \n \n✅ | les membres ( %1 ) qui ont leur compte bloqué sont supprimés avec succès.",
+			kickByMsg: "✅ les %1 membres avec un nombre de messages inférieur à %2 sont supprimés avec succès.",
+			kickError: "❌ | il y a erreur.  %1 membre(s) n'a (n'ont) pas pu être supprimé(s):\n%2",
+			noBlock: "✅ | il n'y a aucun compte bloqué dans le groupe.",
+			noMsg: "✅ | aucun membre avec un nombre de messages envoyés inférieur à %1"
 		}
 	},
 	getfbstate: {
