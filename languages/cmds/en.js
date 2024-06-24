@@ -321,14 +321,14 @@ module.exports = {
 		}
 	},
 	grouptag: {
-		description: "Tag members by group",
-		guide: "   {pn} add <groupTagName> <@tags>: use to add new group tag or add members to group tag\n   Example:\n    {pn} TEAM1 @tag1 @tag2\n\n   {pn} del <groupTagName> <@tags>: use to remove members from group tag\n   Example:\n    {pn} del TEAM1 @tag1 @tag2\n\n   {pn} remove <groupTagName>: use to remove group tag\n   Example:\n    {pn} remove TEAM1\n\n   {pn} rename <groupTagName> | <newGroupTagName>: use to rename group tag\n\n   {pn} [list | all]: use to view list of group tag in your group chat\n\n   {pn} info <groupTagName>: use to view info of group tag",
+		description: "créer un groupe de notification/de discussion.",
+		guide: "   {pn} add <nom du groupe> <@tags>:pour ajouter un groupe de discussion ou ajouter un membre au groupe de notification.\n   Example:\n    {pn} GROUP1 @tag1 @tag2\n\n   {pn} del <nom du groupe> <@tags> : pour supprimer des utilisateurs du groupe de notification \n   Example:\n    {pn} del GROUP1 @tag1 @tag2\n\n   {pn} remove <nom du groupe>:pour supprimer les groupes de notification.\n   Example:\n    {pn} remove GROUP1\n\n   {pn} rename <nom du groupe> | <nouveau nom du groupe>: pour renommer les groupes de notification.\n\n   {pn} [list | all]: pour voir la liste des groupes de notification.\n\n   {pn} info <nom du groupe>: pour voir les informations concernant le groupe mentionné.",
 		text: {
-			noGroupTagName: "Please enter group tag name",
-			noMention: "You haven't tagged any member to add to group tag",
-			addedSuccess: "Added members:\n%1\nto group tag \"%2\"",
-			addedSuccess2: "Added group tag \"%1\" with members:\n%2",
-			existedInGroupTag: "Members:\n%1\nalready existed in group tag \"%2\"",
+			noGroupTagName: "⚜️🌹.................................. \n \n❌ | tu n'as pas mis le nom du goupe..!!",
+			noMention: "⚜️🌹.................................. \n \n❌tu n'as mentionné aucun membre à ajouter au groupe. ",
+			addedSuccess: "⚜️🌹.................................. \n \n✔️les membres :\n%1\nsont ajoutés au groupe\"%2\"",
+			addedSuccess2: "le groupe \"%1\" est créé avec comme membres:\n%2",
+			existedInGroupTag: "Members:\n%1\nalready existed in https://github.com/AnhDerrick/Anh.git tag \"%2\"",
 			notExistedInGroupTag: "Members:\n%1\ndoesn't exist in group tag \"%2\"",
 			noExistedGroupTag: "Group tag \"%1\" doesn't exist in your group chat",
 			noExistedGroupTag2: "Your group chat hasn't added any group tag",
