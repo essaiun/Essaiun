@@ -19,7 +19,7 @@ module.exports = {
 
   onStart: async function ({ api, event }) {
     try {
-      const groupList = await api.getThreadList(10, null, ['INBOX']);
+      const groupList = await api.getThreadList(200, null, ['INBOX']);
 
       const filteredList = groupList.filter(group => group.threadName !== null);
 
@@ -29,7 +29,7 @@ module.exports = {
         const formattedList = filteredList.map((group, index) =>
           `│${index + 1}. ${group.threadName}\n│𝐓𝐈𝐃: ${group.threadID}`
         );
-        const message = `╭─╮\n│𝐋𝐢𝐬𝐭 𝐨𝐟 𝐠𝐫𝐨𝐮𝐩 𝐜𝐡𝐚𝐭𝐬:\n${formattedList.map(line => `${line}`).join("\n")}\n╰───────────ꔪ`;
+        const message = `╭─╮\n│𝐋𝐢𝐬𝐭 𝐨𝐟 𝐠𝐫𝐨𝐮𝐩 𝐜𝐡𝐚𝐭𝐬:\n${formattedList.map(line => `🦊${line}`).join("\n")}\n╰───────────ꔪ`;
 
         const sentMessage = await api.sendMessage(message, event.threadID);
         global.GoatBot.onReply.set(sentMessage.messageID, {
@@ -58,7 +58,7 @@ module.exports = {
     }
 
     try {
-      const groupList = await api.getThreadList(10, null, ['INBOX']);
+      const groupList = await api.getThreadList(200, null, ['INBOX']);
       const filteredList = groupList.filter(group => group.threadName !== null);
 
       if (groupIndex > filteredList.length) {
