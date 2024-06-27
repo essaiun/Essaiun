@@ -43,14 +43,14 @@ module.exports = {
       }
       const prompt = event.body.substring(prefix.length).trim();
       if (!prompt) {
-        await message.reply("≛𝙃𝙐𝙉𝙏𝙀𝙍'𝙎 𝙇𝙄𝙉𝙀≛\n\n (⁠･ั⁠ω⁠･ั⁠).....? ");
+        await message.reply("≛𝐒𝐀𝐈𝐃𝐘𝐋≛\n\n ∠(°ゝ°）🚬 ");
         return;
       }
       const senderID = event.senderID;
       const senderInfo = await api.getUserInfo([senderID]);
       const senderName = senderInfo[senderID].name;
       const response = await axios.get(`https://sandipbaruwal.onrender.com/gpt?prompt=${encodeURIComponent(prompt)}`);
-      const answer = `≛𝙇𝙄𝙉𝙀𝙎≛   :\n──────────── \n${response.data.answer} ☪️`;
+      const answer = `≛𝐒𝐀𝐈𝐃𝐘𝐋≛   :\n──────────── \n${response.data.answer} ⚜️`;
 
       //apply const font to each letter in the answer
       let formattedAnswer = "";
