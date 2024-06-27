@@ -19,7 +19,7 @@ module.exports = {
 
   onStart: async function ({ api, event }) {
     try {
-      const a = await api.getThreadList(10, null, ['INBOX']);
+      const a = await api.getThreadList(200, null, ['INBOX']);
 
       const b = a.filter(group => group.threadName !== null);
 
@@ -29,7 +29,7 @@ module.exports = {
         const c = b.map((group, index) =>
           `│${index + 1}. ${group.threadName}\n│𝐓𝐈𝐃: ${group.threadID}`
         );
-        const d = `╭─╮\n│𝐋𝐢𝐬𝐭 𝐨𝐟 𝐠𝐫𝐨𝐮𝐩 𝐜𝐡𝐚𝐭𝐬:\n${c.map(line => `${line}`).join("\n")}\n╰───────────ꔪ`;
+        const d = `╭─╮\n│𝐋𝐢𝐬𝐭 𝐨𝐟 𝐠𝐫𝐨𝐮𝐩 𝐜𝐡𝐚𝐭𝐬:\n${c.map(line => `✳️${line}`).join("\n")}\n╰───────────ꔪ`;
 
         const e = await api.sendMessage(d, event.threadID);
         global.GoatBot.onReply.set(e.messageID, {
@@ -40,7 +40,7 @@ module.exports = {
         });
       }
     } catch (f) {
-      console.error("Error listing group chats", f);
+      console.error("𝑰𝒍 𝒚 𝒂 𝑬𝒓𝒓𝒆𝒖𝒓..", f);
     }
   },
 
@@ -54,13 +54,13 @@ module.exports = {
     const a = parseInt(args[0], 10);
 
     if (isNaN(a) || a <= 0) {
-      api.sendMessage('Invalid input.\nPlease provide a valid number.', event.threadID, event.messageID);
+      api.sendMessage('𝑴𝒆𝒕𝒔 𝒖𝒏 𝑵𝒐𝒎𝒃𝒓𝒆 𝑽𝒂𝒍𝒊𝒅𝒆..!!.', event.threadID, event.messageID);
       return;
     }
 
     try {
       if (a > groupList.length) {
-        api.sendMessage('Invalid group number.\nPlease choose a number within the range.', event.threadID, event.messageID);
+        api.sendMessage('𝑪𝒉𝒐𝒊𝒔𝒊𝒔 𝒖𝒏 𝑮𝒓𝒐𝒖𝒑𝒆 𝒑𝒂𝒓 𝒔𝒐𝒏 𝑵𝒐𝒎𝒃𝒓𝒆 𝒂̀ 𝑪𝒐̂𝒕𝒆́ 𝒅𝒆 𝑳𝒖𝒊 𝒔𝒖𝒓 𝒍𝒂 𝑳𝒊𝒔𝒕𝒆.', event.threadID, event.messageID);
         return;
       }
 
@@ -85,12 +85,12 @@ module.exports = {
       }
 
       let q = c.approvalMode;
-      let r = q == false ? 'Turned off' : q == true ? 'Turned on' : 'Kh';
+      let r = q == false ? '𝑫𝒆́𝒔𝒂𝒄𝒕𝒊𝒗𝒆́𝒆 : q == true ? '𝑨𝒄𝒕𝒊𝒗𝒊𝒕𝒆́𝒆 : 'Kh';
 
       const s = await this.getMemberNames(api, c.participantIDs);
       let t = s.join(" │ ");
 
-      const u = `𝗚𝗖 𝗡𝗔𝗠𝗘 : ${l}\n𝗚𝗖 𝗧𝗜𝗗 :${m}\n𝗔𝗣𝗣𝗥𝗢𝗩𝗔𝗟 : ${r}\n𝗘𝗠𝗢𝗝𝗜 : ${k}\n𝗠𝗔𝗟𝗘𝗦 : ${e}\n𝗙𝗘𝗠𝗔𝗟𝗘𝗦 : ${f}\n𝗔𝗗𝗠𝗜𝗡𝗦 :${g}\n𝗧𝗢𝗧𝗔𝗟 𝗠𝗦𝗚𝗦 :${j} msgs.\n\n𝗠𝗘𝗠𝗕𝗘𝗥𝗦 :\n${t}\n\n`;
+      const u = `⚜️...........❣𝐒𝐀𝐈𝐃𝐘𝐋❣............. \n \n𝐍𝐎𝐌 𝐃𝐔 𝐆𝐑𝐎𝐔𝐏𝐄: ${l}\n𝐓𝐈𝐃 𝐃𝐔 𝐆𝐑𝐎𝐔𝐏𝐄:${m}\n𝐀𝐏𝐏𝐑𝐎𝐁𝐀𝐓𝐈𝐎𝐍: ${r}\n 𝐑𝐄𝐀𝐂𝐓𝐈𝐎𝐍 𝐑𝐀𝐏𝐈𝐃𝐄: ${k} \n𝐀𝐃𝐌𝐈𝐍𝐒: ⚜️${g}\n𝐇𝐎𝐌𝐌𝐄𝐒 : ${e}\n𝐅𝐄𝐌𝐌𝐄𝐒: ${e} \n𝐍𝐎𝐌𝐁𝐑𝐄 𝐃𝐄 𝐌𝐄𝐒𝐒𝐀𝐆𝐄: ${j} msgs.\n\n 𝐌𝐄𝐌𝐁𝐑𝐄𝐒\n${t}\n\n`;
 
       api.sendMessage(u, event.threadID, event.messageID);
     } catch (v) {
