@@ -1,6 +1,7 @@
-module.exports = {
+oumodule.exports = {
 	config: {
 		name: "all",
+		aliases: "saidyl"
 		version: "1.2",
 		author: "NTKhang",
 		countDown: 5,
