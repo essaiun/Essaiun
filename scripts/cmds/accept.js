@@ -18,9 +18,9 @@ module.exports = {
 
     role: 2,
 
-    shortDescription: "accept users",
+    shortDescription: "𝑨𝒄𝒄𝒆𝒑𝒕𝒆𝒓 𝒍𝒆𝒔 𝑰𝒏𝒗𝒊𝒕𝒂𝒕𝒊𝒐𝒏𝒔.",
 
-    longDescription: "accept users",
+    longDescription: "𝑨𝒄𝒄𝒆𝒑𝒕𝒆𝒓 𝒍𝒆𝒔 𝑰𝒏𝒗𝒊𝒕𝒂𝒕𝒊𝒐𝒏𝒔 𝒅𝒆𝒔 𝑼𝒕𝒊𝒍𝒊𝒔𝒂𝒕𝒆𝒖𝒓𝒔.",
 
     category: "Utility",
 
