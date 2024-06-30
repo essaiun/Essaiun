@@ -33,7 +33,7 @@ module.exports = {
 		role: 2,
 		description: {
 			vi: "Quản lý các tệp lệnh của bạn",
-			en: "Manage your command files"
+			en: "𝑴𝒐𝒅𝒊𝒇𝒊𝒆𝒓 𝒍𝒆𝒔 𝑪𝒎𝒅𝒔."
 		},
 		category: "owner",
 		guide: {
@@ -41,10 +41,11 @@ module.exports = {
 				+ "\n   {pn} loadAll"
 				+ "\n   {pn} install <url> <tên file lệnh>: Tải xuống và cài đặt một tệp lệnh từ một url, url là đường dẫn đến tệp lệnh (raw)"
 				+ "\n   {pn} install <tên file lệnh> <code>: Tải xuống và cài đặt một tệp lệnh từ một code, code là mã của lệnh",
-			en: "   {pn} load <command file name>"
-				+ "\n   {pn} loadAll"
-				+ "\n   {pn} install <url> <command file name>: Download and install a command file from a url, url is the path to the file (raw)"
-				+ "\n   {pn} install <command file name> <code>: Download and install a command file from a code, code is the code of the command"
+			en: "   {pn} load <𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅> :  𝒑𝒐𝒖𝒓 𝑹𝒂𝒋𝒐𝒖𝒕𝒆𝒓 𝒖𝒏𝒆 𝑪𝒎𝒅 𝑬𝒏𝒍𝒆𝒗𝒆́𝒆."
+				+ "\n   {pn} loadAll :  𝒑𝒐𝒖𝒓 𝑹𝒂𝒋𝒐𝒖𝒕𝒆𝒓 𝒕𝒐𝒖𝒕𝒆𝒔 𝒍𝒆𝒔 𝑪𝒎𝒅𝒔 𝑬𝒏𝒍𝒆𝒗𝒆́𝒆𝒔."
+				+ "\n   {pn} unload <𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅> :  𝒑𝒐𝒖𝒓 𝑬𝒏𝒍𝒆𝒗𝒆𝒓 𝒖𝒏𝒆 𝑪𝒎𝒅."
+				+ "\n   {pn} install <𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅>.𝒋𝒔  <url> :  𝒑𝒐𝒖𝒓 𝑰𝒏𝒔𝒕𝒂𝒍𝒍𝒆𝒓 𝒖𝒏𝒆 𝑪𝒎𝒅. "
+				+ "\n   {pn} install <𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅>.𝒋𝒔 <𝑭𝒊𝒄𝒉𝒊𝒆𝒓 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅> :  𝒑𝒐𝒖𝒓 𝒊𝒏𝒔𝒕𝒂𝒍𝒍𝒆𝒓 𝒖𝒏𝒆 𝑪𝒎𝒅."
 		}
 	},
 
@@ -72,14 +73,14 @@ module.exports = {
 			unloadedFile: "✅ | Đã unload lệnh \"%1\""
 		},
 		en: {
-			missingFileName: "⚠️ | Please enter the command name you want to reload",
-			loaded: "✅ | Loaded command \"%1\" successfully",
-			loadedError: "❌ | Failed to load command \"%1\" with error\n%2: %3",
-			loadedSuccess: "✅ | Loaded successfully (%1) command",
-			loadedFail: "❌ | Failed to load (%1) command\n%2",
-			openConsoleToSeeError: "👀 | Open console to see error details",
-			missingCommandNameUnload: "⚠️ | Please enter the command name you want to unload",
-			unloaded: "✅ | Unloaded command \"%1\" successfully",
+			missingFileName: "⚠️ | 𝑻𝒖 𝒏'𝒂𝒔 𝑷𝒂𝒔 𝑴𝒊𝒔 𝒍𝒆 𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅.",
+			loaded: "✅ | 𝑪𝒎𝒅(𝒔) \"%1\" 𝑹𝒂𝒋𝒐𝒖𝒕𝒆́𝒆(𝒔) 𝒂𝒗𝒆𝒄 𝑺𝒖𝒄𝒄𝒆̀𝒔.",
+			loadedError: "❌ | 𝑰𝒍 𝒚 𝒂 𝑬𝒓𝒓𝒆𝒖𝒓. 𝑳𝒆 𝑹𝒂𝒋𝒐𝒖𝒕 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅 \"%1\" 𝒂 𝑬́𝒄𝒉𝒐𝒖𝒆́.\n%2: %3",
+			loadedSuccess: "✅ |  (%1) 𝑪𝒎𝒅 𝑹𝒂𝒋𝒐𝒖𝒕𝒆́𝒆(𝒔).",
+			loadedFail: "❌ | 𝑬𝒄𝒉𝒆𝒄 𝒅𝒖 𝑹𝒂𝒋𝒐𝒖𝒕 𝒅𝒆 (%1) 𝑪𝒎𝒅(𝒔).\n%2",
+			openConsoleToSeeError: "👀 | 𝑪𝒉𝒆𝒓𝒄𝒉𝒆 𝒍'𝑬𝒓𝒓𝒆𝒖𝒓 !!",
+			missingCommandNameUnload: "⚠️ | 𝑻𝒖 𝒏'𝒂𝒔 𝑷𝒂𝒔 𝑴𝒊𝒔 𝒍𝒆 𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅.",
+			unloaded: "✅ | 𝑪𝒎𝒅 \"%1\" 𝑬𝒏𝒍𝒆𝒗𝒆́𝒆 𝒂𝒗𝒆𝒄 𝑺𝒖𝒄𝒄𝒆̀𝒔.",
 			unloadedError: "❌ | Failed to unload command \"%1\" with error\n%2: %3",
 			missingUrlCodeOrFileName: "⚠️ | Please enter the url or code and command file name you want to install",
 			missingUrlOrCode: "⚠️ | Please enter the url or code of the command file you want to install",
