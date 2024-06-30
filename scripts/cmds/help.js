@@ -123,7 +123,7 @@ module.exports = {
 				arrayInfo.sort((a, b) => a.priority > b.priority ? -1 : 1); // sort by priority
 				const { allPage, totalPage } = global.utils.splitPage(arrayInfo, numberOfOnePage);
 				if (page < 1 || page > totalPage)
-					return message.reply(getLang("𝑳𝒂 𝑷𝒂𝒈𝒆 『%1』 𝒒𝒖𝒆 𝑻𝒖 𝒗𝒆𝒖𝒙 𝒏'𝑬𝒙𝒊𝒔𝒕𝒆 𝑷𝒂𝒔 😾", page));
+					return message.reply(getLang("pageNotFound", page));
 
 				const returnArray = allPage[page - 1] || [];
 				const startNumber = (page - 1) * numberOfOnePage + 1;
@@ -155,7 +155,7 @@ module.exports = {
 		}
 		// ———————————— COMMAND DOES NOT EXIST ———————————— //
 		else if (!command && args[0]) {
-			return message.reply(getLang("𝑳𝒂 𝑪𝒎𝒅 \"%1\" 𝒏'𝑬𝒙𝒊𝒔𝒕𝒆 𝑷𝒂𝒔 😾", args[0]));
+			return message.reply(getLang("commandNotFound", args[0]));
 		}
 		// ————————————————— INFO COMMAND ————————————————— //
 		else {
@@ -176,8 +176,8 @@ module.exports = {
 				.replace(/\{name\}|\{n\}/g, configCommand.name)
 				.replace(/\{pn\}/g, prefix + configCommand.name);
 
-			const aliasesString = configCommand.aliases ? configCommand.aliases.join(", ") : getLang("𝑰𝒍 𝒏'𝒆𝒏 𝒂 𝑷𝒂𝒔.");
-			const aliasesThisGroup = threadData.data.aliases ? (threadData.data.aliases[configCommand.name] || []).join(", ") : getLang("𝑰𝒍 𝒏'𝒚 𝒆𝒏 𝒂 𝑷𝒂𝒔");
+			const aliasesString = configCommand.aliases ? configCommand.aliases.join(", ") : getLang("doNotHave");
+			const aliasesThisGroup = threadData.data.aliases ? (threadData.data.aliases[configCommand.name] || []).join(", ") : getLang("doNotHave");
 
 			let roleOfCommand = configCommand.role;
 			let roleIsSet = false;
@@ -199,7 +199,7 @@ module.exports = {
 				if (descriptionCustomLang != undefined)
 					description = checkLangObject(descriptionCustomLang, langCode);
 				else
-					description = getLang("𝑰𝒍 𝒏'𝒚 𝒆𝒏 𝒂 𝑷𝒂𝒔.");
+					description = getLang("doNotHave");
 
 			let sendWithAttachment = false; // check subcommand need send with attachment or not
 
