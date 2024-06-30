@@ -44,7 +44,7 @@ module.exports = {
 			en: "   {pn} load <𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅> :  𝒑𝒐𝒖𝒓 𝑹𝒂𝒋𝒐𝒖𝒕𝒆𝒓 𝒖𝒏𝒆 𝑪𝒎𝒅 𝑬𝒏𝒍𝒆𝒗𝒆́𝒆."
 				+ "\n   {pn} loadAll :  𝒑𝒐𝒖𝒓 𝑹𝒂𝒋𝒐𝒖𝒕𝒆𝒓 𝒕𝒐𝒖𝒕𝒆𝒔 𝒍𝒆𝒔 𝑪𝒎𝒅𝒔 𝑬𝒏𝒍𝒆𝒗𝒆́𝒆𝒔."
 				+ "\n   {pn} unload <𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅> :  𝒑𝒐𝒖𝒓 𝑬𝒏𝒍𝒆𝒗𝒆𝒓 𝒖𝒏𝒆 𝑪𝒎𝒅."
-				+ "\n   {pn} install <𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅>.𝒋𝒔  <url> :  𝒑𝒐𝒖𝒓 𝑰𝒏𝒔𝒕𝒂𝒍𝒍𝒆𝒓 𝒖𝒏𝒆 𝑪𝒎𝒅. "
+				+ "\n   {pn} install <𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅>.𝒋𝒔  <𝑳𝒊𝒆𝒏 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅> :  𝒑𝒐𝒖𝒓 𝑰𝒏𝒔𝒕𝒂𝒍𝒍𝒆𝒓 𝒖𝒏𝒆 𝑪𝒎𝒅. "
 				+ "\n   {pn} install <𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅>.𝒋𝒔 <𝑭𝒊𝒄𝒉𝒊𝒆𝒓 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅> :  𝒑𝒐𝒖𝒓 𝒊𝒏𝒔𝒕𝒂𝒍𝒍𝒆𝒓 𝒖𝒏𝒆 𝑪𝒎𝒅."
 		}
 	},
@@ -65,7 +65,7 @@ module.exports = {
 			missingFileNameInstall: "⚠️ | Vui lòng nhập vào tên file để lưu lệnh (đuôi .js)",
 			invalidUrl: "⚠️ | Vui lòng nhập vào url hợp lệ",
 			invalidUrlOrCode: "⚠️ | Không thể lấy được mã lệnh",
-			alreadExist: "⚠️ | File lệnh đã tồn tại, bạn có chắc chắn muốn ghi đè lên file lệnh cũ không?\nThả cảm xúc bất kì vào tin nhắn này để tiếp tục",
+			alreadExist: "⚠️ | File lệnh đtại, bạn có chắc chắn muốn ghi đè lên file lệnh cũ không?\nThả cảm xúc bất kì vào tin nhắn này để tiếp tục",
 			installed: "✅ | Đã cài đặt command \"%1\" thành công, file lệnh được lưu tại %2",
 			installedError: "❌ | Cài đặt command \"%1\" thất bại với lỗi\n%2: %3",
 			missingFile: "⚠️ | Không tìm thấy tệp lệnh \"%1\"",
@@ -81,18 +81,18 @@ module.exports = {
 			openConsoleToSeeError: "👀 | 𝑪𝒉𝒆𝒓𝒄𝒉𝒆 𝒍'𝑬𝒓𝒓𝒆𝒖𝒓 !!",
 			missingCommandNameUnload: "⚠️ | 𝑻𝒖 𝒏'𝒂𝒔 𝑷𝒂𝒔 𝑴𝒊𝒔 𝒍𝒆 𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅.",
 			unloaded: "✅ | 𝑪𝒎𝒅 \"%1\" 𝑬𝒏𝒍𝒆𝒗𝒆́𝒆 𝒂𝒗𝒆𝒄 𝑺𝒖𝒄𝒄𝒆̀𝒔.",
-			unloadedError: "❌ | Failed to unload command \"%1\" with error\n%2: %3",
-			missingUrlCodeOrFileName: "⚠️ | Please enter the url or code and command file name you want to install",
-			missingUrlOrCode: "⚠️ | Please enter the url or code of the command file you want to install",
-			missingFileNameInstall: "⚠️ | Please enter the file name to save the command (with .js extension)",
-			invalidUrl: "⚠️ | Please enter a valid url",
-			invalidUrlOrCode: "⚠️ | Unable to get command code",
-			alreadExist: "⚠️ | The command file already exists, are you sure you want to overwrite the old command file?\nReact to this message to continue",
-			installed: "✅ | Installed command \"%1\" successfully, the command file is saved at %2",
-			installedError: "❌ | Failed to install command \"%1\" with error\n%2: %3",
-			missingFile: "⚠️ | Command file \"%1\" not found",
-			invalidFileName: "⚠️ | Invalid command file name",
-			unloadedFile: "✅ | Unloaded command \"%1\""
+			unloadedError: "❌ | 𝑰𝒍 𝒚 𝒂 𝑬𝒓𝒓𝒆𝒖𝒓 !! 𝑳𝒂 𝑪𝒎𝒅 \"%1\" 𝒏'𝒂 𝑷𝒂𝒔 𝒑𝒖 𝒆̂𝒕𝒓𝒆 𝑬𝒏𝒍𝒆𝒗𝒆́𝒆.\n%2: %3",
+			missingUrlCodeOrFileName: "⚠️ |  𝑻𝒖 𝒏'𝒂𝒔 𝑷𝒂𝒔 𝑴𝒊𝒔 𝒍𝒆 𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅.",
+			missingUrlOrCode: "⚠️ |   𝑻𝒖 𝒏'𝒂𝒔 𝑷𝒂𝒔 𝑴𝒊𝒔 𝒍𝒆 𝑳𝒊𝒆𝒏 𝒐𝒖 𝒍𝒆 𝑪𝒐𝒅𝒆 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅.",
+			missingFileNameInstall: "⚠️ |  𝑻𝒖 𝒏'𝒂𝒔 𝑷𝒂𝒔 𝑴𝒊𝒔 𝒍𝒆 𝑵𝒐𝒎 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅 𝒐𝒖 𝒕𝒖 𝒏𝒆 𝑳'𝒂𝒔 𝑷𝒂𝒔 𝑩𝒊𝒆𝒏 𝑴𝒊𝒔.",
+			invalidUrl: "⚠️ | 𝑪𝒆 𝑳𝒊𝒆𝒏 𝒆𝒔𝒕 𝑰𝒏𝒗𝒂𝒍𝒊𝒅𝒆..!!",
+			invalidUrlOrCode: "⚠️ | 𝑪𝒆 𝑳𝒊𝒆𝒏 𝒆𝒔𝒕 𝑰𝒏𝒗𝒂𝒍𝒊𝒅𝒆.. !!",
+			alreadExist: "⚠️ |  𝑪𝒆 𝑭𝒊𝒄𝒉𝒊𝒆𝒓 𝑬𝒙𝒊𝒔𝒕𝒆 𝒅𝒆́𝒋𝒂̀. 𝑻𝒖 𝒗𝒆𝒖𝒙 𝑳𝒆 𝑹𝒆𝒎𝒑𝒍𝒂𝒄𝒆𝒓 ?\n 𝑹𝒆́𝒂𝒈𝒊𝒔 𝒂̀ 𝒄𝒆 𝑴𝒆𝒔𝒔𝒂𝒈𝒆 𝒑𝒐𝒖𝒓 𝑪𝒐𝒏𝒇𝒊𝒓𝒎𝒆𝒓. ",
+			installed: "✅ | 𝑰𝒏𝒔𝒕𝒂𝒍𝒍𝒂𝒕𝒊𝒐𝒏 𝑹𝒆́𝒖𝒔𝒔𝒊𝒆: \"%1\". \n 𝑭𝒊𝒄𝒉𝒊𝒆𝒓 𝑷𝒍𝒂𝒄𝒆́ 𝒅𝒂𝒏𝒔: %2",
+			installedError: "❌ | 𝑬́𝒄𝒉𝒆𝒄 𝒅𝒆 𝒍'𝑰𝒏𝒔𝒕𝒂𝒍𝒍𝒂𝒕𝒊𝒐𝒏 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅: \"%1\". \n 𝑳𝒆 𝑭𝒊𝒄𝒉𝒊𝒆𝒓 𝑪𝒐𝒎𝒑𝒐𝒓𝒕𝒆 𝒖𝒏𝒆 𝑬𝒓𝒓𝒆𝒖𝒓.\n%2: %3",
+			missingFile: "⚠️ | 𝑭𝒊𝒄𝒉𝒊𝒆𝒓 𝒅𝒆 𝒍𝒂 𝑪𝒎𝒅 \"%1\" 𝒏𝒐𝒏 𝑻𝒓𝒐𝒖𝒗𝒆́ !! ",
+			invalidFileName: "⚠️ | 𝑴𝒆𝒕𝒔 𝒖𝒏 𝑵𝒐𝒎 𝒅𝒆 𝑪𝒎𝒅 𝑽𝒂𝒍𝒊𝒅𝒆..!!",
+			unloadedFile: "✅ | 𝑪𝒎𝒅 \"%1\" 𝑬𝒏𝒍𝒆𝒗𝒆́𝒆."
 		}
 	},
 
