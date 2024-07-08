@@ -7,16 +7,16 @@ module.exports = {
 		role: 0,
 		description: {
 			vi: "Xem số lượng tin nhắn của tất cả thành viên hoặc bản thân (tính từ lúc bot vào nhóm)",
-			en: "View the number of messages of all members or yourself (since the bot joined the group)"
+			en: "𝑽𝒐𝒊𝒓 𝒍𝒆 𝑵𝒐𝒎𝒃𝒓𝒆 𝒅𝒆 𝑴𝒆𝒔𝒔𝒂𝒈𝒆 𝒆́𝒄𝒓𝒊𝒕 𝒑𝒂𝒓 𝑻𝒐𝒊 𝒆𝒕 𝒑𝒂𝒓 𝒕𝒐𝒖𝒔 𝒍𝒆𝒔 𝑨𝒖𝒕𝒓𝒆𝒔 𝑴𝒆𝒎𝒃𝒓𝒆𝒔 𝒅𝒆𝒑𝒖𝒊𝒔 𝒒𝒖𝒆 𝒍𝒆 𝑩𝒐𝒕 𝒂 𝒆́𝒕𝒆́ 𝑨𝒋𝒐𝒖𝒕𝒆́ 𝒂𝒖 𝑮𝒓𝒐𝒖𝒑𝒆."
 		},
 		category: "box chat",
 		guide: {
 			vi: "   {pn}: dùng để xem số lượng tin nhắn của bạn"
 				+ "\n   {pn} @tag: dùng để xem số lượng tin nhắn của những người được tag"
 				+ "\n   {pn} all: dùng để xem số lượng tin nhắn của tất cả thành viên",
-			en: "   {pn}: used to view the number of messages of you"
-				+ "\n   {pn} @tag: used to view the number of messages of those tagged"
-				+ "\n   {pn} all: used to view the number of messages of all members"
+			en: "    {pn}: 𝑷𝒐𝒖𝒓 𝒗𝒐𝒊𝒓 𝒍𝒆 𝑵𝒐𝒎𝒃𝒓𝒆 𝒅𝒆 𝑴𝒆𝒔𝒔𝒂𝒈𝒆 𝒆́𝒄𝒓𝒊𝒕 𝒑𝒂𝒓 𝑻𝒐𝒊-𝒎𝒆̂𝒎𝒆."
+				+ "\n    {pn} <@𝑵𝒐𝒎 𝒅'𝒖𝒏 𝒖𝒕𝒊𝒍𝒊𝒔𝒂𝒕𝒆𝒖𝒓>:  𝑷𝒐𝒖𝒓 𝒗𝒐𝒊𝒓 𝒍𝒆 𝑵𝒐𝒎𝒃𝒓𝒆 𝒅𝒆 𝑴𝒆𝒔𝒔𝒂𝒈𝒆 𝒆́𝒄𝒓𝒊𝒕 𝒑𝒂𝒓 𝑳𝒖𝒊."
+				+ "\n    {pn} all:   𝑷𝒐𝒖𝒓 𝒗𝒐𝒊𝒓 𝒍𝒆 𝑵𝒐𝒎𝒃𝒓𝒆 𝒅𝒆 𝑴𝒆𝒔𝒔𝒂𝒈𝒆 𝒆́𝒄𝒓𝒊𝒕 𝒑𝒂𝒓 𝒕𝒐𝒖𝒔 𝒍𝒆𝒔 𝑴𝒆𝒎𝒃𝒓𝒆𝒔."
 		}
 	},
 
@@ -31,13 +31,13 @@ module.exports = {
 			invalidPage: "Số trang không hợp lệ"
 		},
 		en: {
-			count: "Number of messages of members:",
-			endMessage: "Those who do not have a name in the list have not sent any messages.",
-			page: "Page [%1/%2]",
-			reply: "Reply to this message with the page number to view more",
-			result: "%1 rank %2 with %3 messages",
-			yourResult: "You are ranked %1 and have sent %2 messages in this group",
-			invalidPage: "Invalid page number"
+			count: "⚜🌹𝐍𝐎𝐌𝐁𝐑𝐄 𝐃𝐄 𝐌𝐄𝐒𝐒𝐀𝐆𝐄 𝐏𝐀𝐑 𝐌𝐄𝐌𝐁𝐑𝐄🌹⚜",
+			endMessage: "𝑪𝒆𝒖𝒙 𝒅𝒐𝒏𝒕 𝒍𝒆 𝑵𝒐𝒎 𝒏𝒆 𝑭𝒊𝒈𝒖𝒓𝒆 𝒔𝒖𝒓 𝒍𝒂 𝑳𝒊𝒔𝒕𝒆 𝒏'𝒐𝒏𝒕 𝒕𝒐𝒖𝒕 𝒃𝒐𝒏𝒏𝒆𝒎𝒆𝒏𝒕 𝑬𝒏𝒗𝒐𝒚𝒆́ 𝑨𝒖𝒄𝒖𝒏 𝑴𝒆𝒔𝒔𝒂𝒈𝒆 𝒅𝒂𝒏𝒔 𝒍𝒆 𝑮𝒓𝒐𝒖𝒑𝒆.",
+			page: "𝑷𝒂𝒈𝒆  [%1/%2]",
+			reply: "𝑹𝒆́𝒑𝒐𝒏𝒅𝒔 𝒂̀ 𝒄𝒆 𝑴𝒆𝒔𝒔𝒂𝒈𝒆 𝒂𝒗𝒆𝒄 𝒍𝒆 𝑵𝒐𝒎𝒃𝒓𝒆 𝒅𝒆 𝑷𝒂𝒈𝒆 𝒑𝒐𝒖𝒓 𝒗𝒐𝒊𝒓 𝒑𝒍𝒖𝒔 (𝒍𝒂 𝒑𝒂𝒈𝒆 𝒔𝒖𝒊𝒗𝒂𝒏𝒕𝒆).",
+			result: "%1  𝒆𝒔𝒕 𝒂𝒖 𝑹𝒂𝒏𝒈  %2  𝒂𝒗𝒆𝒄  %3  𝑴𝒆𝒔𝒔𝒂𝒈𝒆𝒔 𝒆𝒏𝒗𝒐𝒚𝒆́𝒔 𝒅𝒂𝒏𝒔 𝒍𝒆 𝒈𝒓𝒐𝒖𝒑𝒆✌.",
+			yourResult: "⚜🌹.................................. \n \n 𝑻𝒖 𝒆𝒔 𝒂𝒖 𝑹𝒂𝒏𝒈 %1  𝒂𝒗𝒆𝒄  %2  𝑴𝒆𝒔𝒔𝒂𝒈𝒆𝒔 𝒆𝒏𝒗𝒐𝒚𝒆́𝒔 𝒅𝒂𝒏𝒔 𝒍𝒆 𝒈𝒓𝒐𝒖𝒑𝒆 ✌. \n \n ⚜🌹.................................. ",
+			invalidPage: "⚜🌹.................................. \n \n𝑵𝒐𝒎𝒃𝒓𝒆 𝒅𝒆 𝑷𝒂𝒈𝒆 𝑰𝒏𝒗𝒂𝒍𝒊𝒅𝒆 \n \n ⚜🌹.................................. "
 		}
 	},
 
@@ -50,7 +50,7 @@ module.exports = {
 		for (const user of members) {
 			if (!usersInGroup.includes(user.userID))
 				continue;
-			const charac = "️️️️️️️️️️️️️️️️️"; // This character is banned from facebook chat (it is not an empty string)
+			const charac = ""; // This character is banned from facebook chat (it is not an empty string)
 			arraySort.push({
 				name: user.name.includes(charac) ? `Uid: ${user.userID}` : user.name,
 				count: user.count,
@@ -159,7 +159,7 @@ module.exports = {
 		}
 		else
 			findMember.count += 1;
-		await threadsData.set(threadID, members, "members");
+		await threadsData.set(threadID, members, "members"); 
 	}
 
 };
