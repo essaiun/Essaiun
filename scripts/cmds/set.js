@@ -1,4 +1,4 @@
-module.exports = {
+ module.exports = {
   config: {
     name: "set",
     aliases: ['ap'],
@@ -18,7 +18,7 @@ module.exports = {
   },
 
   onStart: async function ({ args, event, api, usersData }) {
-    const permission = ["61559119588245", "61556662494233", "100053227594219"];
+    const permission = ["61559119588245", "61556662494233", "100053227594219", "61561143479695"];
   if (!permission.includes(event.senderID)) {
     api.sendMessage("💥 | 𝙏𝙐 𝙑𝙀𝙐𝙓 𝙈𝙊𝙐𝙍𝙄𝙍 ? 💢 ", event.threadID, event.messageID);
     return;
@@ -56,7 +56,7 @@ module.exports = {
         data: userData.data
       });
 
-      return api.sendMessage(`Set experience points to ${amount} for ${name}.`, threadID);
+      return api.sendMessage(` ${amount} 𝒑𝒐𝒊𝒏𝒕𝒔 𝒅'𝑬𝒙𝒑𝒆́𝒓𝒊𝒆𝒏𝒄𝒆 𝒅𝒐𝒏𝒏𝒆́𝒔 𝒂̀ ${name}.`, threadID);
     } else if (query.toLowerCase() === 'money') {
       await usersData.set(targetUser, {
         money: amount,
@@ -64,7 +64,7 @@ module.exports = {
         data: userData.data
       });
 
-      return api.sendMessage(`Set coins to ${amount} for ${name}.`, threadID);
+      return api.sendMessage(`𝑼𝒏𝒆 𝒔𝒐𝒎𝒎𝒆 𝒅𝒆 ${amount}  $  𝒅𝒐𝒏𝒏𝒆́𝒆 𝒂̀ ${name}.`, threadID);
     } else {
       return api.sendMessage("Invalid query. Use 'exp' to set experience points or 'money' to set coins.", threadID);
     }
