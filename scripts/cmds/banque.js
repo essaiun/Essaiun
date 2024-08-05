@@ -107,22 +107,22 @@ case "solde":
 
 
 case "interet":
-  const interestRate = 20; // 12% daily interest rate
+  const interestRate = 0.05; // 1% daily interest rate
   const lastInterestClaimed = bankData[user].lastInterestClaimed || 0;
 
   const currentTime = Date.now();
   const timeDiffInSeconds = (currentTime - lastInterestClaimed) / 1000;
 
   if (timeDiffInSeconds < 300) {
-    // If it's been less than 5 minutes since the last interest claim
+    // If it's been less than 5 since the last interest claim
     const remainingTime = Math.ceil(300 - timeDiffInSeconds);
-    const remainingHours = Math.floor(remainingTime / 37500);
+    const remainingHours = Math.floor(remainingTime / 18000);
     const remainingMinutes = Math.floor((remainingTime % 60) / 12);
 
     return message.reply(`╔-------------------------------╗\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n✨💜𝚃𝚄 𝙿𝙴𝚄𝚇 𝙴𝙽𝙲𝙾𝚁𝙴 𝚁𝙴𝙲𝙻𝙰𝙼𝙴𝚁 𝚃𝙴𝚂 𝙸𝙽𝚃𝙴𝚁𝙴𝚃𝚂 𝙳𝙰𝙽𝚂 ${remainingHours} 𝙷𝙴𝚄𝚁𝙴𝚂 𝙴𝚃 ${remainingMinutes} 𝙼𝙸𝙽𝚄𝚃𝙴𝚂 ☪•\n\n╚-----------------------------╝`);
   }
 
-  const interestEarned = bankData[user].bank * (interestRate / 970) * timeDiffInSeconds;
+  const interestEarned = bankData[user].bank * (interestRate / 1000) * timeDiffInSeconds;
 
   if (bankData[user].bank <= 0) {
         return message.reply("╔-----------------------------╗\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n🚫𝙰𝚅𝙰𝙽𝚃 𝙳𝙴 𝚁𝙴𝙲𝙻𝙰𝙼𝙴𝚁 𝚃𝙴𝚂 𝙸𝙽𝚃𝙴𝚁𝙴𝚃𝚂 𝙰𝚂𝚂𝚄𝚁𝙴 𝚃𝙾𝙸 𝙳'𝙰𝚅𝙾𝙸𝚁 𝙳𝙴 𝙻'𝙰𝚁𝙶𝙴𝙽𝚃 𝚂𝚄𝚁 𝚃𝙾𝙽 𝙲𝙾𝙼𝙿𝚃𝙴 𝙱𝙰𝙽𝙲𝙰𝙸𝚁𝙴✨😌•\n\n╚------------------------------╝");
@@ -190,7 +190,7 @@ break;
 
 
 case "pret":
-  const maxLoanAmount = 1000000000; //increase of decrease this
+  const maxLoanAmount = 10000000000; //increase of decrease this
   const userLoan = bankData[user].loan || 0;
   const loanPayed = bankData[user].loanPayed !== undefined ? bankData[user].loanPayed : true;
 
@@ -199,7 +199,7 @@ case "pret":
   }
 
   if (amount > maxLoanAmount) {
-    return message.reply("╔------------------------------╗\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n💵𝗅𝖾 𝗆𝗈𝗇𝗍𝖺𝗇𝗍 𝗆𝖺𝗑𝗂𝗆𝖺𝗅 𝖽𝖾 𝗉𝗋𝖾̂𝗍 𝖾𝗌𝗍 $100000000 🙌•\n\n╚-------------------------------╝");
+    return message.reply("╔------------------------------╗\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n💵𝗅𝖾 𝗆𝗈𝗇𝗍𝖺𝗇𝗍 𝗆𝖺𝗑𝗂𝗆𝖺𝗅 𝖽𝖾 𝗉𝗋𝖾̂𝗍 𝖾𝗌𝗍 $1000000000 🙌•\n\n╚-------------------------------╝");
   }
 
   if (!loanPayed && userLoan > 0) {
@@ -249,7 +249,7 @@ case "paiement":
 fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
 
 
-  return message.reply(`______________________\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n🕊𝗋𝖾𝗉𝖺𝗒𝖾𝗋 👻 𝖺𝗏𝖾𝖼 𝗌𝗎𝖼𝖼𝖾̀𝗌 $${amount} 𝗅𝖾 𝗉𝗋𝖾̂𝗍 𝗉𝗋𝖾̂𝗍𝖾́. 𝖨𝗅 𝗋𝖾𝗌𝗍𝖾 𝖺̀ 𝗉𝖺𝗒𝖾𝗋  💵: $${bankData[user].𝗉𝗋𝖾̂𝗍} ✔•\n\n________________________`);
+  return message.reply(`______________________\n\n[🏦 𝗕𝗔𝗡𝗤𝗨𝗘 🏦]\n\n🕊𝗋𝖾𝗉𝖺𝗒𝖾𝗋 👻 𝖺𝗏𝖾𝖼 𝗌𝗎𝖼𝖼𝖾̀𝗌 $${amount} 𝗅𝖾 𝗉𝗋𝖾̂𝗍 𝗉𝗋𝖾̂𝗍𝖾́. 𝖨𝗅 𝗋𝖾𝗌𝗍𝖾 𝖺̀ 𝗉𝖺𝗒𝖾𝗋  💵: $${bankData[user].loan} ✔•\n\n________________________`);
 
 break;
 
@@ -311,4 +311,4 @@ function formatNumberWithFullForm(number) {
 
   // Add the full form to the formatted number
   return `${formattedNumber} ${fullForms[fullFormIndex]}`;
-  }
+      }
