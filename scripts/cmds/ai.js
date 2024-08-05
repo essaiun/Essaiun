@@ -1,4 +1,4 @@
- const axios = require('axios');
+const axios = require('axios');
 
 async function fetchFromAI(url, params) {
   try {
@@ -37,34 +37,29 @@ async function getAIResponse(input, userId, messageID) {
 module.exports = {
   config: {
     name: 'ai',
-   aliases: ["saidyl"],
+    aliases: ["saidyl"],
     author: 'Arn',
     role: 0,
     category: 'ai',
-    shortDescription: 'ai to ask anything',
+    shortDescription: 'AI to ask anything',
   },
   onStart: async function ({ api, event, args }) {
     const input = args.join(' ').trim();
     if (!input) {
-      api.sendMessage(`Please provide a question or statement. `, event.threadID, event.messageID);
+      api.sendMessage(`Please provide a question or statement.`, event.threadID, event.messageID);
       return;
     }
 
     const { response, messageID } = await getAIResponse(input, event.senderID, event.messageID);
-    api.sendMessage(` \n⚜🌹...............................\n${response}\n
-
-⚜🌹...............................`, event.threadID, messageID);
+    api.sendMessage(`\n⚜🌹...............................\n${response}\n⚜🌹...............................`, event.threadID, messageID);
   },
-  onChat: async function ({ event, message }) {
+  onChat: async function ({ api, event }) {
     const messageContent = event.body.trim().toLowerCase();
     if (messageContent.startsWith("ai")) {
       const input = messageContent.replace(/^ai\s*/, "").trim();
-      const { response, messageID } = await getAIResponse(input, event.senderID, message.messageID);
-      message.reply(`
-
-\n⚜🌹...............................
-\n${response}\n
-⚜🌹...............................`, messageID);
+      const { response, messageID } = await getAIResponse(input, event.senderID, event.messageID);
+      api.sendMessage(`\n⚜🌹...............................\n${response}\n⚜🌹...............................`, event.threadID, messageID);
     }
   }
 };
+ 
