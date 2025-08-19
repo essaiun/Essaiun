@@ -12,7 +12,7 @@
 	"antiInbox": false,
 	"language": "en",
 	"notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
-	"nickNameBot": "𝐬𝐚𝐢𝐝𝐲𝐥",
+	"nickNameBot": "𝐒𝐚𝐢𝐝𝐲𝐥",
 	"prefix": "#",
 	"adminOnly": {
 		
@@ -23,7 +23,7 @@
 		"ignoreCommand": []
 	},
 	"adminBot": [
-		"100053227594219", 
+		"61573107511398", 
 		"61556662494233"
 		
 	],
